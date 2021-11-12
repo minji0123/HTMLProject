@@ -1,0 +1,46 @@
+/*class로 스타일 넣기*/
+/*profile 는 class selector*/
+.profile { 
+/*    얘는 10점*/
+    width : 100px; 
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.textStyle{
+    color : red;
+}
+
+.textAlign{
+    text-align : center;
+}
+
+.content{
+    color:blueviolet
+}
+
+
+
+
+/*class말고 다른 방법으로 넣기*/
+/* 모든 p태그의 스타일을 이렇게 설정할 수 있움*/
+/*p 는 tag selector*/
+p {
+/*    얘는 1점*/
+     text-align : center;
+ }
+
+
+
+
+/*id로 스타일 넣기*/
+/*special 은 id selector*/
+#special{
+/*    100점*/
+     text-align : center;
+    color:coral
+ }
+
+/*class 랑 id 랑 무슨 차이?*/
+/*id 는 자바스크립트할 때 사용함. css에서는 그냥 class 사용한다고 생각하셈*/
