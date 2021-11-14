@@ -1,0 +1,41 @@
+
+.container {
+    width:800px;
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.blog-content {
+    width: 80%;
+    height: 200px;
+/*    background: #eee;*/
+    float: left;
+}
+
+.blog-img {
+    width: 20%;
+    height: 200px;
+/*    background: yellow;*/
+    float: left;
+}
+
+.img-size {
+    width: 70%;
+    margin: 10%;
+}
+
+.blog-profile {
+    width: 50px;
+    float: left;
+}
+
+.blog-name {
+    float: left;
+}
+
+/*ch09_navbar*/
+/* 이렇게 하면 모든 li 블록들이 해당 태그를 가질 수 있다.*/
+.navbar li{
+    display: inline-block;
+}

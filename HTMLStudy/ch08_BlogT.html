@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="css/ch08t.css" rel="stylesheet">
+</head>
+<body>   
+    <div class="container">
+        <div class="blog-content">
+            <div>
+                <img src="image/lion.png" class="blog-profile">
+                <div class="blog-name">
+                    <!--  h, p태그는 기본 margine 이 들어있음 -->
+                    <!--  그래서 문장 사이 공간 띄려면은 margin사용하셈 -->
+                    <h4 style="margin:5px;">이름</h4>
+                    <p style="margin:5px;">날짜</p>
+                </div>
+            </div>
+            
+            <!--  float 으로 정렬된 div틀 사이 공간 띄우기  -->
+            <div style="clear:both;"></div>
+            <!-- <div style="clear: both;"> 얘를 없애고 clear만의 div box 만들어주셈-->
+            <!--  그리고 여기다가 margine top 해주고-->
+            <div style="margin-top: 10px;">
+                <h4 style="margin:5px;"> 블로그 글</h4>
+                <p style="margin:5px;"> 가성비 맛집 발견</p>
+            </div>
+        </div>
+        <div class="blog-img">
+            <img src="image/tv.jpg" class="img-size">
+        </div>
+    </div>
+</body>
+</html>
