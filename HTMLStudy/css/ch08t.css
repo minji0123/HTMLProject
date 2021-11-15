@@ -36,6 +36,28 @@
 
 /*ch09_navbar*/
 /* 이렇게 하면 모든 li 블록들이 해당 태그를 가질 수 있다.*/
+/*selector 문법 공백 : ~ 안에 있는 모든 자식*/
+/*selector 문법 > : ~ 안에 있는 직계 자식 ( 하위 태그들_탭 두반 이상에는 적용앙됨) */
 .navbar li{
+    /*  한 줄로 출력 가능  */
+    display: inline-block;
+    width: 60px;
+    text-align: center;
+    background: #eee;
+    padding: 10px;
+    border-radius: 5px;
+}
+/*
+.navbar>li>a>span{ 이렇게 출력하는거임 근데 이거는 비추천
+딱 읽었을 때 어떤걸 스타일링하는지 보여야 하는데, 안보인다.
+***상위 태그를 만들어서, css 적용을 하는게 낫다.***
     display: inline-block;
 }
+*/
+.navbar a{
+    font-size: 16px;
+    /* a 태그의 밑줄제거 기능 */
+    text-decoration: none;
+}
+
+
