@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/ch12.css" rel="stylesheet">
+</head>
+<body style="margin: 0px;">
+    <div class="main-background">
+        <h4 class="main-title">Buy Our Shoes!</h4>
+
+        <p class="para-letter">신발 사세요 <br> 버튼 누르면 신발사짐 개신기함</p>
+        <button class="main-button">누르셈</button>
+    </div>
+    
+    <div class="explain-box">
+        <h4>신발 디자인 어케했냐면</h4>
+        <P>그냥 이렇게 저렇게 했음</P>
+    </div>
+    
+    <!-- 로그인창 이런거 만들기 (개쩐다)-->
+    <!-- form action="경로" : 우리가 쓴 글이 서버로 전송이 될 텐데, 그 때 어떤 경로로 전달되는지 적어주는 거임 -->
+    <!-- form method="get" : 우리가 쓴 글이 서버로 전송이 될 텐데, 그 때 어떤 방식으로 서버에 전달되는지 적어주는 거임 -->
+    <form>
+        <input type="text" class="text-input">
+        <input type="text" value="글자가 보임">
+        <input type="text" placeholder="배경글자임">
+        <!-- 서버로 전달할 때 많이 사용함 -->
+<!--
+        <input type="text" name="(서버용)age">
+        <input type="text" name="(서버용)school">
+-->
+        <input type="email">
+        <input type="password">
+        <input type="date">
+        <br><br>
+        <input type="file">
+        <br><br>
+        <input type="radio">여기다 글쓰기 가능
+        <input type="checkbox">ㅇㅇㅇ
+        <input type="submit">
+        <button type="submit">얘랑 같은거임</button>
+        <!-- 선택상자 만들기 ㄱㄴ -->
+        <select>
+            <option>agshgfd</option>
+            <option>sdfsaedd</option>
+            <option>sssssss</option>
+        </select>
+        <br><br>
+        <!-- textarea는 글상자 크기 조절 가능함 
+            rows="숫자" 처음 페이지 로딩될 때 크기 설정해줌-->
+        <textarea rows="10">오른쪽아래 드래그해보셈</textarea>
+    </form>
+
+</body>
+</html>

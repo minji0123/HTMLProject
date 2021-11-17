@@ -44,7 +44,7 @@
 }
 
 .left-menu {
-    /*    160px겠네*/
+    /* 160px겠네*/
     width:20%;
     height:400px;
     background: cornflowerblue;
@@ -65,5 +65,5 @@
     height : 100px;
     background: grey;
     /*  float 다음에 오는 요소에게 주면 float 로 발생하는 이상현상 해결 가능  */
-    clear: both;
+/*    clear: both;*/
 }
