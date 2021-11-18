@@ -1,6 +1,11 @@
-div{
+/* 셀렉터 공통적인 특징 한번에 적용하기
+    - 테그셀렉터 말고 다른애들도 넣기 ㅆㄱㄴ
+    - div, input, textarea, .class {}*/
+div, input, textarea {
     box-sizing: border-box;
 }
+
+
 
 body{
     margin: 0px;
@@ -61,15 +66,51 @@ body{
     top: -40px;
 }
 
-input[type=text] {
-    padding: 10px;
-    font-size: 20px;
-    border: 2px solid black;
-    border-radius: 5px;
-    
-}
 
 .form-background {
     background-color: black;
     padding: 30px;
+}
+
+.form-white {
+    background-color: white;
+    padding: 30px;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.w-50 {
+    width: 50%;
+    float: left;
+    padding: 10px;
+}
+
+.w-100 {
+    width: 100%;
+    padding: 10px;
+}
+
+.form-long {
+    height: 50%;
+    font-size: 17px;
+}
+
+.yellow-button {
+    width: 30%;
+    padding: 10px;
+    display: block;
+    margin-left: auto;
+    border: 1px solid black;
+    border-radius: 5px;
+/*    background-color: ;*/
+/*    color: white;*/
 }
