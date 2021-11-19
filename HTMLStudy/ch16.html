@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/ch15.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="cart-background">
+        <h3>Your Shopping Cart</h3>
+        
+        <!-- 2. nth-child() 문법 이용 -->
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <td></td>
+                    <!-- 1. 여기 있는 th 폭 만져주면은 -->
+<!--                <th class="cell-long">Item</th>-->
+                    <!-- 2. 그리고 이렇게 class작명 하는 방법 말고 다른거두 있음 -->
+                    <th>Item</th>
+                    <th>Amount</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="image/item1.png" width="50px"></td>
+                    <!-- 1. 여기 있는 애도 같이 만져짐-->
+                    <td>신발</td>
+                    <td>1</td>
+                    <td>7000</td>
+                    <td>7000</td>
+                </tr>
+                <tr>
+                    <!-- colspan="5" 이 td는 옆의 셀 5개를 합쳐주세여 -->
+                    <td colspan="5" style="text-align: right">총가격: 7000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

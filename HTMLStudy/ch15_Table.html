@@ -43,22 +43,33 @@
                 <td>2</td>
                 <td>3</td>
             </tr>
+        </table>
+    </div>
             
-        <div>
+    
+    <div>
             <!-- 9-1 글씨들간의 세로정렬할 때 vertical-align 씀
                         (inline/inline-block 요소 간 세로정렬)
                         display: inline 항상 옆으로 채워지는 폭과 너비가 없는 요소 rgrg? -->
             <p style="font-size: 50px">greetings<span style="font-size: 20px; vertical-align: bottom">안녕</span></p>
             <!-- 글자끼리는 super(위첨자_ 부모테그있을때 사용), top 이런거들 많으니까 한번 눌러서 실험해보셈 -->
-        </div>
-        <!-- 9-2 글자랑 그림이랑 크기 맞추고 싶다. -->
-        <div> <img src="https://mdn.mozillademos.org/files/12245/frame_image.svg" width="32" height="32"> <span style="vertical-align: top">image with a default alignment.</span></div>
-        
-            
-        </table>
-    
     </div>
     
+    
+        <!-- 9-2 글자랑 그림이랑 크기 맞추고 싶다. -->
+    <div> 
+        <img src="https://mdn.mozillademos.org/files/12245/frame_image.svg" width="32" height="32"> <span style="vertical-align: top">image with a default alignment.</span>
+    </div>
+            
+
+    <!-- 10. div 태그로 표만들기 (굳이 쓸 필요ㄴㄴ) -->
+    <div style="display: table">
+        <div style="display: table-row">
+            <div style="display: table-cell"></div>
+            <div style="display: table-cell"></div>
+            <div style="display: table-cell"></div>
+        </div>
+    </div>
     
 </body>
 </html>
