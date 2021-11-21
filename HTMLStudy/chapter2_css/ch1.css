@@ -1,0 +1,53 @@
+
+/* ch1
+웹폰트 첨부방법
+    용량 줄이기
+    호환성 접기
+    트래픽절약
+    폰트 anti-aliasing
+*/
+/*2. 다운받아야 하는 폰트 (커스텀 폰트) 넣기
+        내가 준비한 폰트파일을 css 에서 사용가능하게 등록하는 과정임*/
+@font-face{
+    font-family: '이쁜폰트B';
+    src: url(../font/NanumSquareB.ttf);
+}
+
+/*4. @font-face 여러개 넣을 수 있음. 근데 용량이 너무 커서... 넣기 좀 빡셈=>사이트 로딩 속도가 느려짐*/
+/*웹용 woff 사용하셈*/
+
+@font-face{
+    font-family: '이쁜폰트R';
+    src: url(../font/NanumSquareR.woff);
+}
+
+
+/*5. fonts.google.com 여기서 사용하셈*/
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+div, input, textarea{
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0px;
+    /* 1. 폰트넣는법 */
+        /*  font-family 속성은 자동 inherit(상속)됨. 그래서 모든 애들에 다 폰트적용됨 */
+    font-family: 'Nanum Gothic', sans-serif;
+/*    font-family: 'Nanum Gothic', 'gulim' , 'dotum', 'arial', sans-serif;*/
+        /* gmlim 이 오류가 남 -> dotum 으로 자동 넘어감. 근데 또 오류가 남 -> arial 로 넘어감 =>안정적임*/
+        /* 이런 폰트는 클라이언트 컴터에도 폰트가 있어야 잘 적용됨. 
+                그래서 나눔스퀘어같은애들 다운받아야 하는거는 깨질 수 있음*/
+    font-size: 40px;
+    /* 3. 폰트 굵게하기 근데 깨지니까 그냥 B쓰셈  */
+    font-weight: 900;
+}
+
+/*6. 폰트가 깨질 때 (막 까끌까끌해보일때)*/
+p {
+    /* 글자를 조오오금 돌려주셈 그럼 굴림체 같은거 안깨짐 아무도 모르는 팁 */
+    transform: rotate(0.03deg);
+}
+
+

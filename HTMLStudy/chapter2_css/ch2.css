@@ -1,0 +1,163 @@
+div, input, textarea {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.main-background {
+    width: 100%;
+    height: 500px;
+    background-image: url(../image/shoes.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: cover;
+    background-position: center;
+    padding: 1px;
+    position: relative;
+}
+
+.main-title {
+    color: white;
+    font-size: 40px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.para-letter {
+    color: aliceblue;
+    font-size: 20px;
+    font-family:sans-serif;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.main-button {
+    padding: 15px;
+    font-size: 20px;
+    background: white;
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100px;
+}
+
+
+.explain-box {
+    width: 80%;
+    max-width: 600px;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #eee;
+    position: relative;
+    top: -40px;
+}
+
+
+.form-background {
+    background-color: black;
+    padding: 30px;
+}
+
+.form-white {
+    background-color: white;
+    padding: 30px;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.w-50 {
+    width: 50%;
+    float: left;
+    padding: 10px;
+}
+
+.w-100 {
+    width: 100%;
+    padding: 10px;
+}
+
+.form-long {
+    height: 50%;
+    font-size: 17px;
+}
+
+.yellow-button {
+    width: 30%;
+    padding: 10px;
+    display: block;
+    margin-left: auto;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.flex-item {
+    /* 알다시피 최대한 100px임. 진짜 100px 아님 */
+    width: 100px;
+    height: 100px;
+    background-color: grey;
+    margin: 5px;
+}
+
+.flex-container {
+    /* 자식 상자 가로배치 */
+    display: flex;
+    /* 자식 상자 가운데 정렬 */
+/*    justify-content: center;*/
+    /* 자식 상자 오른쪽 정렬 */
+/*    justify-content:flex-end;*/
+    /* 자식 상자 왼 쪽 정렬 */
+/*    justify-content:flex-start;*/
+    /* 자식 상자 공간띄우기 */
+/*    justify-content: space-between;*/
+    
+    /* 자식 상자 세로배치 (row 로 배치하면 가로로 됨.)그냥 어느방향으로 배치할지 고르는거임 */
+/*    flex-direction: column;*/
+    /* 자식 상자의 width 크기에 맞게 밑의 요소를 내려줌 flex-wrap: wrap
+        얘없으면 자식 상자 width 크기가 일정 크기 이상으로 커지면 고정됨*/
+/*    flex-wrap: wrap;*/
+    
+    
+    /* 자식 상자 상하정렬 */
+/*
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+*/
+    
+    
+    
+}
+
+.nav-container {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    padding:10px;
+    background-color: #FF7576;
+    
+}
+
+.nav-item {
+    margin-right: 10px;
+    color: white;    
+    font-size: 20px;
+}

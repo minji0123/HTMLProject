@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="../chapter1_css/normalize.css" rel="stylesheet">
+    <link href="../chapter1_css/ch18.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--Object Oriented CSS  oocss 작성관습-->
+    <!--초보 코딩 : 코드 하나하나 다 만듦-->
+    <!--빨간버튼 파란버튼 만들어야 하면은-->
+    <!-- 중복되는 코드가 생긴다. (배경색 빼고는 다 똑같은 코드임) -->
+<!--
+    <button class="btn-red">더알아보기</button>
+    <button class="btn-blue">구매하기</button>
+-->
+    <!--고수 코딩 : 뼈대용, 살점용 class 각각 제작
+        케릭터 스킨 갈아끼우는 거처럼-->
+    <button class="main-btn bg-red">더알아보기</button>
+    <button class="main-btn bg-blue">구매하기</button>
+        <!-- 장점
+                1. css양이 줄어듦
+                2. 유지보수 편리 -->
+    
+    <!-- class 작명할 때 창의력이 딸리면 BEM : BLOCK__ELEMENT--MODIFIER -->
+    <!-- class= "뭘 담당함?__어떤역할임?--어떤특징임??" -->
+    
+    <div class="profile">
+        <img class="profile__img">
+        <h4 class="profile__title"></h4>
+        <p class="profile__content"></p>
+        <button class="profile__button--red">버튼1</button>
+        <button class="profile__button--blue">버튼2</button>
+        <!-- 근데 modifier는 굳이 쓰지말고, 고수 코딩으로 가자 -->
+        <!-- __말고 -를 사용해도 ㄱㅊ-->
+        
+        
+        
+        <!-- 추가 -->
+        <!-- 요즘은 react, Vue로 html을 만들게 되면서 OOCSS, BEM을 굳이 안사용함
+                react나 Vue는 덩어리 component 단위로 html 파일 나눠서 코드짬여
+                component 에서만 사용가능한 css 생성 가능-->
+    </div>
+    
+</body>
+</html>
+
+

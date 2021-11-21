@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="../chapter1_css/ch07.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 1.  bolck으로 정렬했을 때, div 사이 공백주는 법 :font-size  -->
+    <!-- 3.  그럼 안에다가 글씨쓰고싶을 때는 어카냐  : 자식태그에다가 font size 넣어주셈-->
+<!--<div class="container" style="font-size: :0px"> -->
+    
+    
+    <div class="container">
+        <div class="header"></div>
+        <!-- 2. float말고 block으로 이렇게도 가로정렬 가능
+                근데 공백을 못줘서 부모 font size조절이나, 주석공백으로 처리해야됨-->
+<!--        <div class="left-menu" style="font-size :20px"></div>-->
+        
+        
+<!--        2. 이렇게 주석으로 하는게 더 나은거같음-->
+        <div class="left-menu"></div><!--
+      --><div class="right">
+        <!--  이거 글씨쓰면은 아래로 넘어가버리는거는 vertical-align: top; 해주면 됨 -->
+        <p>안녕하세여</p>
+        </div>
+        <div class="footer"></div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="../chapter2_css/ch4.css" rel="stylesheet">
+    <link rel="icon" href="../image/hare.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../fontAwesome/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body style="margin: 0px;">
+
+    <nav class="nav-container">
+        <div class="nav-item"><strong>ShoeShop</strong></div>
+        <div style="flex-grow:1"></div>
+        <div class="nav-item"><strong>Products</strong></div>
+        <div class="nav-item"><strong>Services</strong></div>
+    </nav>
+
+    <div class="main-background">
+        <h4 class="main-title">Buy Our Shoes! Now On Sale</h4>
+
+        <p class="para-letter">신발 사세요 <br> 버튼 누르면 신발사짐 개신기함</p>
+        <button class="main-button">누르셈</button>
+    </div>
+
+    <div class="explain-box">
+        <h4>신발 디자인 어케했냐면</h4>
+        <P>그냥 이렇게 저렇게 했음</P>
+    </div>
+
+    <div class="product-contanier">
+        <div>
+            <i class="fas fa-shopping-cart fa-3x"></i>
+            <h4>Fast Shipping</h4>
+            <p>We ship faster than other shops</p>
+        </div>
+        <div>
+            <i class="fas fa-globe-americas fa-3x"></i>
+            <h4>Good Service</h4>
+            <p>Expect a lifelong service</p>
+        </div>
+        <div>
+            <i class="fas fa-money-check-alt fa-3x"></i>
+            <h4>Free Coupons</h4>
+            <p>With new welcome gifts</p>
+        </div>
+        <div>
+            <i class="fas fa-socks fa-3x"></i>
+            <h4>New Products</h4>
+            <p>See monthly new products</p>
+        </div>
+        <div style="float: none; clear:both; "></div>
+    </div>
+
+    <!-- 애니메이션 만드는 법!! -->
+    <div class="shop-bg">
+        <div class="shop-container">
+           
+            <div class="shop-item">
+                <!-- 2. position쓰려면 부모태그를 만들어야함 -->
+                <div style="position: relative">
+                    <!-- b. 최종스타일 박스임. 붕 떠있어야함 그래서 position써야함-->
+                    <div class="overlay"></div>
+                    <img src="../image/product1-1.jpg">
+                </div>
+            </div>
+            
+            <div class="shop-item">
+                <img src="../image/product2.jpg">
+            </div>
+            
+            <div class="shop-item">
+                <img src="../image/product3.jpg">
+            </div>
+        </div>
+    </div>
+    <!-- one-way 애니메이션 만드는 step
+        a. 시작스타일 만들기
+        b. 최종스타일 만들기
+        c. 언제 최종스타일로 변하는지 트리거 주기(ex, 마우스 올렸을 때)
+        d. transition 으로 애니메이션 젹옹-->
+
+    <div class="form-background">
+        <div class="form-white">
+            <form>
+                <div class="w-100">
+                    <h3>Contact Us</h3>
+                    <p>Your Email</p>
+                    <input class="form-input" placeholder="examples@gmail.com" type="email">
+                </div>
+                <div class="w-50">
+                    <p>First Name</p>
+                    <input class="form-input" type="text">
+                </div>
+                <div class="w-50">
+                    <p>Last Name</p>
+                    <input class="form-input" type="text">
+                </div>
+                <div style="clear: both;"></div>
+                <div class="w-100">
+                    <p>Message</p>
+                    <textarea class="form-input form-long"></textarea>
+                </div>
+                <div>
+                    <input id="sub" type="checkbox">
+                    <label for="sub">Subscribe</label>
+                    <div class="w-100">
+                        <button class="yellow-button">SEND</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body></html>

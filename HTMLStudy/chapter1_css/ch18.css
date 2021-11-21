@@ -1,0 +1,52 @@
+/*초보용 코드*/
+/* 중복되는 코드가 생긴다. (배경색 빼고는 다 똑같은 코드임) */
+/*
+.btn-red {
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    background: red;
+}
+
+.btn-blue {
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    background: blue;
+}
+*/
+
+
+/*뼈대용 class*/
+.main-btn {
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+/*살점용 class*/
+.bg-red{
+    background: red;
+}
+
+.bg-blue {
+    background: blue;
+}
+
+
+/*만들어두면 편한 살점용 class : 유틸리티 class*/
+/*1. 글자크기 유틸리티class*/
+.f-small{
+    font-size: 12px;
+}
+.f-mid{
+    font-size: 16px;
+}
+.f-lg{
+    font-size: 20px;
+}
+
+
+
