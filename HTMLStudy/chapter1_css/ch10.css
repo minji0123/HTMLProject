@@ -2,49 +2,50 @@
 .main-background {
     width: 100%;
     height: 500px;
-    /* background-image는 배경에 이미지를 넣을 수 있는거임 */
-    /* background-image: url(../는 상위폴더로 이동하라는 뜻_이미지 경로);*/
+    /* 1. background-image : 배경에 이미지를 넣어주셈 */
         /* 배경 여러개 겹치기도 가능 */
-/*        background-image: url(/image/ch02_짱구.jpg), url();*/
+        /* background-image: url(/image/ch02_짱구.jpg), url();*/
     background-image: url(../image/shoes.jpg);
-    /* 배경이미지 사이즈 조절 가능 */
+    
+    /* 2. 배경이미지 사이즈 조절 가능 */
     background-size: 100%;
-    /* 배경이미지는 위에 설정한 div박스랑 딱 안맞으면 바독판됨 
+    
+    /* 3. 배경이미지는 위에 설정한 div박스랑 딱 안맞으면 바둑판됨 
         그거 막으려면 아래 명령어 써주셈 */
     background-repeat: no-repeat;
-    /* 근데 이제 div박스랑 크기가 안맞으니까 밑에 공간이 있음 
-        그냥 사이즈 조절해도 되기는 한데, cover, contain 사용해도` 됨*/
+    /* 근데 이제 div박스랑 크기가 안맞으니까 밑에 공간이 남음(비어있음)
+        그냥 사이즈 조절해도 되기는 한데, cover, contain 사용하셈*/
     
-        /* contain : 그림 안짤리게 해주셈 div남아도 괜춘*/
+    /* 3-1 contain : 그림 안짤리게 해주셈 div남아도 괜춘*/
     background-size: contain;
     
-    /* cover : 그림이 짤려도 상관 없으니까 꽉 채워주셈 
+    /* 3-2 cover : 그림이 짤려도 상관 없으니까 꽉 채워주셈 
         cover를 더 많이 사용함*/
     background-size: cover;
     
-    /* 배경위치 조정가능 */
+    /* 4. 배경위치 조정가능 */
     background-position: center;
     
-    /* 스크롤 시 배경 위치 조정 가능함_
-        fixed : 고정됨 딴거도 있으니까 적용해보셈*/
+    /* 5. 스크롤 시 배경 위치 조정 가능함_
+            fixed : 고정됨 딴거도 있으니까 적용해보셈*/
 /*    background-attachment: fixed;*/
     
-    /* 박스에 보정 입히기_ 윈도우 11이상부터 됨
+    /* 6. 박스에 보정 입히기_ 윈도우 11이상부터 됨
         자동완성 되니까 한번 해보셈 근데 버튼이나 글자에 다 적용되니까 알아서 잘 쓰셈
         - 밝기조정 하는 이유 : 거기 위에다가 글씨 써야하니까*/
 /*    filter: sepia(40%);*/
+
     
-    /* 예전버전 보정 입히기 */
-    
-    /* margin collapse 방지 : 부모박스에 padding 해주셈_테두리 안붙게 해줌(안쪽 여백)*/
+    /* 7-1 margin collapse 방지 
+        : 부모박스에 padding 해주셈_테두리 안붙게 해줌(안쪽 여백)*/
     padding: 1px;
-    
     position: relative;
 }
 
 .main-title {
     color: white;
     font-size: 40px;
+    /*  7. margin collapse */
     /* 글자에 여백을 주고 싶은데, 이상하게 배경 사진까지 여백 지정이 됨
         이를 margin collapse 현상 이라고 함*/
     margin-top: 100px;

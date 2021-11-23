@@ -65,8 +65,7 @@ body{
     /* 근데 이 width%는 pc사이즈에서 너무 크대 그래서 max-width로 제어해주는거임
         max-width 이상으로는 사이즈가 커지지 않음*/
     max-width: 600px;
-    
-    /* 이 명령어를 주면, width가 padding, border까지 고려해줌
+    /*  아래 명령어를 주면, width가 padding, border까지 고려해줌
         *********얘 태그셀렉터에 적어놓고 개발시작하면 편하대*******/
     box-sizing: border-box;
 /*    box-sizing: content-box; 이거는 padding, border 포함안됨*/
