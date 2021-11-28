@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Gothic&display=swap');
+.main-background {
+    width: 100%;
+    height: 400px;
+    background-image: url(../image/workspace.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    
+    /* 3-2 cover : 그림이 짤려도 상관 없으니까 꽉 채워주셈 
+        cover를 더 많이 사용함*/
+    background-size: cover;
+
+    background-position: center;
+    padding: 1px;
+    position: relative;
+    border-radius: 5px;
+}
+.main-title {
+    
+}
+
+.main-title {
+    color: white;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 90px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.para-title {
+    color: aliceblue;
+    font-size: 20px;
+    font-family:sans-serif;
+/*    letter-spacing: 4px;*/
+/*    font-weight: 600;*/
+    text-align: center;
+}
+
+.para-letter {
+        color: aliceblue;
+    font-size: 16px;
+    font-family:sans-serif;
+    text-align: center;
+}
+
+.information-icon {
+    font-size: 30px ;
+}
+
+.link-deco {
+    text-decoration : none;
+    color:black;
+}
+.link-deco:hover {
+    text-decoration : none;
+    color:grey;
+}
+
+

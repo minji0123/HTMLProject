@@ -1,0 +1,169 @@
+  <!-- chatper1_ch17 pseudo class : hover같은거
+               특정 요소가 [다른 상태일 때] 스타일을 줄 수 있게 도와주는 클래스 -->
+  <!-- button, a, input 등
+        클릭할 때 스타일을 다르게 줄 수 있다.-->
+
+  <!--chapter3_ch1 pseudo element ::???
+                내 안의 [일부분만] 스타일 줄 때
+                -->
+
+<!DOCTYPE html>
+  <html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="../chapter3_css/ch1.css" rel="stylesheet">
+    <link rel="icon" href="../image/hare.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../fontAwesome/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body style="margin: 0px;">
+
+    <nav class="nav-container">
+        <div class="nav-item"><strong>ShoeShop</strong></div>
+        <div style="flex-grow:1"></div>
+        <div class="nav-item"><strong>Products</strong></div>
+        <div class="nav-item"><strong>Services</strong></div>
+    </nav>
+
+    <div class="main-background">
+        <h4 class="main-title">Buy Our Shoes! Now On Sale</h4>
+
+        <p class="para-letter">신발 사세요 <br> 버튼 누르면 신발사짐 개신기함</p>
+        <button class="main-button">누르셈</button>
+    </div>
+
+
+
+    <div class="explain-box">
+        <h4>신발 디자인 어케했냐면</h4>
+        <!-- 0. Pseudo-element 셀렉터 : 특정 HTML 요소의 안쪽 일부만 스타일을 주고 싶을 때 
+           pseudo::first-letter 
+           근데 이거는 사실 별로 안쓰고, 그나마 쓰이는게 :after, before임-->
+        <P class="pseudo">그냥 이렇게 저렇게 했음여 신발이 참 이쁘</P>
+    </div>
+
+
+    <!-- 파일 업로드 버튼 스타일링을 해야함 근데 style로는 디자인을 꾸밀 수가 없음(안먹음)  -->
+    <!--   <input type="file" style="width: 300px;">-->
+    
+    <input type="file" class="input-file">
+    <!--  근데 이 버튼은 뒤에 '선택된 파일 없음' 이라는 글자가 있음 이거는 다음시간에 ㄱㄱ -->
+    <input type="file">
+
+
+
+    <!--2.근데 여기다가 psedo element 하나 추가하면은 clear both안써도 됨   -->
+    <div class="product-contanier">
+        <div>
+            <i class="fas fa-shopping-cart fa-3x"></i>
+            <h4>Fast Shipping</h4>
+            <p>We ship faster than other shops</p>
+        </div>
+        <div>
+            <i class="fas fa-globe-americas fa-3x"></i>
+            <h4>Good Service</h4>
+            <p>Expect a lifelong service</p>
+        </div>
+        <div>
+            <i class="fas fa-money-check-alt fa-3x"></i>
+            <h4>Free Coupons</h4>
+            <p>With new welcome gifts</p>
+        </div>
+        <div>
+            <i class="fas fa-socks fa-3x"></i>
+            <h4>New Products</h4>
+            <p>See monthly new products</p>
+        </div>
+        <!--        <div style="float: none; clear:both; "></div>-->
+        <!-- 1. div박스 가로배치할때 float랑 clear both같이 썼었음 -->
+    </div>
+
+
+<!--
+Pseudo-element를 활용하면
+
+ 
+
+- CSS 만으로 버튼에 마우스 올리면 배경 어둡게하기 https://codepen.io/css-tricks/pen/dxyfA
+
+- CSS만으로 3D 느낌 리본모양만들기 https://codepen.io/team/css-tricks/pen/mVZGKa
+
+- ol 태그의 숫자 스타일링하기 https://www.456bereastreet.com/archive/201105/styling_ordered_list_numbers/
+
+- table 반응형으로 만드는 여러가지 방법 https://css-tricks.com/responsive-data-tables/
+
+- CSS만으로 영문 폰트 만들기 https://yusugomori.com/projects/css-sans/fonts 
+
+ 
+
+등이 가능합니다. 대부분 약간 쓸데없습니다.
+
+다만 다음 시간에 배울 shadow DOM을 위해 꼭 알고 지나가야하니
+
+내부에 있는 pseudo-element를 스타일줄 땐 :: 를 이용한다는 사실을 까먹지 맙시다.
+-->
+    
+    
+
+    <div class="shop-bg">
+        <div class="shop-container">
+
+            <div class="shop-item">
+                <div style="position: relative">
+                    <div class="overlay-wrap">
+                        <div class="overlay-black"><span style="color: whitesmoke; padding:20px;"><strong>$60</strong></span></div>
+                    </div>
+                    <img src="../image/product1-1.jpg">
+                </div>
+            </div>
+
+            <div class="shop-item">
+                <img src="../image/product2.jpg">
+            </div>
+
+            <div class="shop-item">
+                <img src="../image/product3.jpg">
+            </div>
+        </div>
+    </div>
+
+    <div class="form-background">
+        <div class="form-white">
+            <form>
+                <div class="w-100">
+                    <h3>Contact Us</h3>
+                    <p>Your Email</p>
+                    <input class="form-input" placeholder="examples@gmail.com" type="email">
+                </div>
+                <div class="w-50">
+                    <p>First Name</p>
+                    <input class="form-input" type="text">
+                </div>
+                <div class="w-50">
+                    <p>Last Name</p>
+                    <input class="form-input" type="text">
+                </div>
+                <div style="clear: both;"></div>
+                <div class="w-100">
+                    <p>Message</p>
+                    <textarea class="form-input form-long"></textarea>
+                </div>
+                <div>
+                    <input id="sub" type="checkbox">
+                    <label for="sub">Subscribe</label>
+                    <div class="w-100">
+                        <button class="yellow-button">SEND</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body></html>

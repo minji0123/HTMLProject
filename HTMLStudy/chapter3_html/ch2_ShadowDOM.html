@@ -1,0 +1,182 @@
+<!--Shadow DOM : <input type="file"> 
+            내가 분명 HTML 1개를 적었는데 2개가 한번에 생성이 된다니 신기하지 않습니까.-->
+ <!DOCTYPE html>
+  <html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="../chapter3_css/ch1.css" rel="stylesheet">
+    <link rel="icon" href="../image/hare.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../fontAwesome/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body style="margin: 0px;">
+
+    <nav class="nav-container">
+        <div class="nav-item"><strong>ShoeShop</strong></div>
+        <div style="flex-grow:1"></div>
+        <div class="nav-item"><strong>Products</strong></div>
+        <div class="nav-item"><strong>Services</strong></div>
+    </nav>
+
+    <div class="main-background">
+        <h4 class="main-title">Buy Our Shoes! Now On Sale</h4>
+
+        <p class="para-letter">신발 사세요 <br> 버튼 누르면 신발사짐 개신기함</p>
+        <button class="main-button">누르셈</button>
+    </div>
+
+
+
+    <div class="explain-box">
+        <h4>신발 디자인 어케했냐면</h4>
+        <P class="pseudo">그냥 이렇게 저렇게 했음여 신발이 참 이쁘</P>
+    </div>
+
+
+    <!--  근데 이 버튼은 뒤에 '선택된 파일 없음' 이라는 글자가 있음 
+            버튼이랑 글자 이렇게 2개의 HTML 요소가 생성된거임 -->
+
+    <input type="file" style="background-color: skyblue;">
+    <input type="file" style="color: skyblue;">
+    <!--  버튼에다가 배경색을 주고 싶을때는?!?
+            1.구글에다가 input 태그인데, type이 file거 스타일링 어케합니까 해도 됨  -->
+
+    <input type="file">
+    <!--  <style>이거는 css파일 열기 귀찮을때 사용하는거임  -->
+    <style>
+        /*  -webkit-file-upload-button 이거는 개발자모드 들어가서 pseudo 복붙해주면됨
+                        webkit은 크롬, 사파리, edge에서만 적용됨
+                        moz는 파폭
+                        ms는 익스플로러*/
+        input[type=file]::-webkit-file-upload-button {
+            /*            background: skyblue;*/
+            border: none;
+            margin: 10px;
+        }
+    </style>
+
+    <!-- 실무에서 input 버튼 만드는 방법(이뿌게) -->
+    <label>안녕!!<input type="file" style="display: none;"></label>
+
+
+    <!-- placeholder도 해봄   -->
+    <input placeholder="안녕하세여..">
+    <style>
+        input::-webkit-input-placeholder {
+            color: gray;
+            font-size: 10px;
+        }
+    </style>
+
+   
+   
+    <input type="range">
+    <style>
+        /*appearance : none 브라우저 기본 css안보이게*/
+        input[type=range]{
+        appearance: none;
+        }
+        input::-webkit-slider-runnable-track {
+            background: grey;
+        }
+
+        input[type=range]::-webkit-slider-thumb {
+            /*여기다가 넣기도 해야함*/
+            appearance: none;
+            background: red;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+    
+    <progress value="0.5"></progress>
+
+
+    <div class="product-contanier">
+        <div>
+            <i class="fas fa-shopping-cart fa-3x"></i>
+            <h4>Fast Shipping</h4>
+            <p>We ship faster than other shops</p>
+        </div>
+        <div>
+            <i class="fas fa-globe-americas fa-3x"></i>
+            <h4>Good Service</h4>
+            <p>Expect a lifelong service</p>
+        </div>
+        <div>
+            <i class="fas fa-money-check-alt fa-3x"></i>
+            <h4>Free Coupons</h4>
+            <p>With new welcome gifts</p>
+        </div>
+        <div>
+            <i class="fas fa-socks fa-3x"></i>
+            <h4>New Products</h4>
+            <p>See monthly new products</p>
+        </div>
+    </div>
+
+
+
+
+    <div class="shop-bg">
+        <div class="shop-container">
+
+            <div class="shop-item">
+                <div style="position: relative">
+                    <div class="overlay-wrap">
+                        <div class="overlay-black"><span style="color: whitesmoke; padding:20px;"><strong>$60</strong></span></div>
+                    </div>
+                    <img src="../image/product1-1.jpg">
+                </div>
+            </div>
+
+            <div class="shop-item">
+                <img src="../image/product2.jpg">
+            </div>
+
+            <div class="shop-item">
+                <img src="../image/product3.jpg">
+            </div>
+        </div>
+    </div>
+
+    <div class="form-background">
+        <div class="form-white">
+            <form>
+                <div class="w-100">
+                    <h3>Contact Us</h3>
+                    <p>Your Email</p>
+                    <input class="form-input" placeholder="examples@gmail.com" type="email">
+                </div>
+                <div class="w-50">
+                    <p>First Name</p>
+                    <input class="form-input" type="text">
+                </div>
+                <div class="w-50">
+                    <p>Last Name</p>
+                    <input class="form-input" type="text">
+                </div>
+                <div style="clear: both;"></div>
+                <div class="w-100">
+                    <p>Message</p>
+                    <textarea class="form-input form-long"></textarea>
+                </div>
+                <div>
+                    <input id="sub" type="checkbox">
+                    <label for="sub">Subscribe</label>
+                    <div class="w-100">
+                        <button class="yellow-button">SEND</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body></html>

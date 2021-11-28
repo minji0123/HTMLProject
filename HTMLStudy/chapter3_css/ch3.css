@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/*
+SCSS의 용도
+1.어려운 단어 기억해야 할 때는 변수문법을 사용함
+2. 규칙적인 스타일을 만들 때도 변수가 도움이 됨 (관리 개편함)
+----사실 css에도 이런거 있음(사진 참고)----
+*/
+.background {
+  background-color: #2a4cb2;
+  font-size: 14px;
+}
+
+.box {
+  width: 100px;
+  color: #eeeeee;
+  font-size: 18px;
+}/*# sourceMappingURL=ch3.css.map */
