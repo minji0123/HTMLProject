@@ -7,40 +7,83 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    
     <link href="../chapter1_css/ch08.css" rel="stylesheet">
+    <script src="../chapter1_js/jquery-3.6.0.min.js"> </script>
 
     <title>Hello, world!</title>
 </head>
 
 <body>
-   
-   <!--즐겁게 모달 창을 개발해보도록 함
+
+    <!--즐겁게 모달 창을 개발해보도록 함
         1. html로 미리 디자인해놓고 
         2. 숨겨놨다가
         3. 버튼 눌렀을 때 보여주기
         +모달창은 body의 맨 위에 배치한다.-->
-        
-        
-<!--   얘로 배경전체를 투명 검정으로 바꾸고-->
-   <div class="black-background"> 
-       <div class="white-background">
-           <p>로그인하세요</p>
-       </div>
-   </div>
-   
+
+    <!--모달창-->
+    <!--   얘로 배경전체를 투명 검정으로 바꾸고-->
+    <div class="black-background">
+        <!--  얘로 모달창 디자인하기    -->
+        <div class="white-background">
+            <p>로그인하세요</p>
+        </div>
+    </div>
+
+
+    <!--  [Listgroup] nav메뉴 만들기-->
+    <div class="nav-menu">
+        <h4 style="margin: 0">Shirts Studio</h4>
+        <a id="nav-sub-button">Products</a>
+    </div>
+
+    <!--  nav메뉴의 모달창 만들기 -->
+    <ul class="list-group nav-sub">
+        <li class="list-group-item">Outer</li>
+        <li class="list-group-item">InnerWear</li>
+        <li class="list-group-item">Shirts</li>
+    </ul>
+
+
+    <!--[Jumbotron]-->
+    <!--    배경화면처럼 쓸 수 있는 카드??같은 애임-->
     <div class="jumbotron main-background">
         <h1 class="display-4">Shirts Studio</h1>
         <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
         <hr class="my-4">
         <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        <a id="login" class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
     </div>
 
-    <!-- Optional JavaScript; choose one of the two! -->
+    <script>
+        // 모달창
+        $('#login').on('click', function() {
+            $('.black-background').fadeIn();
+        });
+        /*쓸만한 j쿼리 함수 몇개
+            기본  디자인 : hide() show() Toggle()
+            모달창 디자인 : fadeIn() fadeOut() fadeToggle()
+            메뉴창 디자인 : slideDown() slideUp() slideToggle()
+        */
 
+        // nav메뉴
+        $('#nav-sub-button').click(function() { // on써도 되고, 그냥 click써도됨
+            // 만약에 지금 list가 안보이면 보이게 해주고요
+            // 만약에 지금 list가 보이면 안보이게 해주세요
+            $('.nav-sub').slideToggle();
+
+        });
+    </script>
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <!--    부트스트랩에는 j쿼리 슬림버전이 이미 있어서, 지워버리고 다시 깔아야함-->
+    <!--    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>-->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 
 </body></html>

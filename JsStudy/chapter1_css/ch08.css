@@ -3,6 +3,7 @@
     background-image: url(../image/girl.jpg);
     background-size: cover;
     color: white;
+    border-radius: 0px;
 }
 
 .black-background {/*ch08*/
@@ -11,6 +12,13 @@
     z-index: 5; /* 부트스트랩이 1부터 4까지 쓰고있음*/
     width:100%;
     height:100%;
+    
+    /*이제 숨겨놔야함(이벤트가 작동하기 전까지는 안보여야함)*/
+    display: none;
+        /* visibility: hidden; 얘를 쓰면 ui`에 자국이 남는대 (특수상황에서 씀)*/
+/*    opacity: 0;*/
+        /* opacity를 0으로 설정했다가 1로 바꾸면 보인다. 
+                근데 얘는 투명도만 설정해줘서 겹쳐져버림*/
 }
 
 .white-background {/*ch08*/
@@ -19,4 +27,15 @@
     margin: 100px auto;
     padding: 20px;
     border-radius: 10px;
+}
+
+.nav-menu {/*ch08*/
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    align-items: center;
+}
+
+.nav-sub {/*ch08*/
+    display: none;
 }
