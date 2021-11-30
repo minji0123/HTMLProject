@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="../chapter1_css/ch02.css" rel="stylesheet">
+
+</head>
+
+<!--
+[jQuery]
+    1. 라이브러리
+    2. javascript 코드 양을 줄임
+    3. 요즘은 리액트 쓰긴하는데, 그래도 알아놓자
+    
+-->
+
+<body>
+    <!--a. 링크로 사용하기 CDN-->
+    <!--    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>-->
+    <!--b. 직접 다운받기-->
+    <script src="../chapter1_js/jquery-3.6.0.min.js"> </script>
+
+    <h4 id="test">안녕하세요</h4>
+
+
+    <script>
+        // 1. 자바스크립트로 했을 때
+        // document.getElementById('test').innerHTML = "???";
+        
+        // 2. j쿼리로 했을 때
+        //        $('#test') // id
+        //        $('.test1') // class
+
+        
+        // 괄호 안에 아무것도 안쓰면 디폴트 글자만 남음_안녕하세요만 남음
+        $('#test').html('안녕');        //.html : 안에 있는 모든 html
+
+        $('#test').text('안녕');        //.text : 안에 있는 모든 글자
+
+        $('#test').css('color', 'blue');      //.css : css 바꿀수있음
+        // style="color: blue"랑 같은거임
+        
+        //.attr : html 세부 속성 변경 가능
+        $('#test').attr('src', 'dddd.jpg');
+    </script>
+
+
+</body></html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="../chapter1_css/ch02.css" rel="stylesheet">
+</head>
+
+
+<body>
+    <script src="../chapter1_js/jquery-3.6.0.min.js"> </script>
+    <h4 id="test">안녕하세요</h4>
+    <p class="greeting">안녕하세요</p>
+    <p class="greeting">안녕하세요</p>
+    <p class="greeting">안녕하세요</p>
+
+
+    <button class="btn">버튼btn</button>
+    <button class="btn">버튼btn</button>
+    <button class="btn">버튼btn</button>
+
+
+    <script>
+        /*[jQuery] 쓰는이유:
+            1. 짧아서
+            2. 쌩자스로는 못하는거 ㄱㄴ함
+            3. 애니메이션을 만들기 ㄱㄴ함*/
+        $('#test').addClass('yellow-bg');
+
+
+        //---------------------------------
+        // 2. 쌩자스로는 못하는거 ㄱㄴ함
+        // 1. 생자스로 안녕하세요 - >안녕
+        document.getElementsByClassName('greeting')[0].innerHTML = '안녕';
+        // 한번에 하나밖에 못바꿔서 [0],[1],[2] 까지 다 바꿔야함
+
+        // 2. j쿼리로 안녕하세요 -> 안녕
+        $('.greeting').html('안녕');
+
+        //---------------------------------
+        // 2. 쌩자스로는 못하는거 ㄱㄴ함
+        // 1. 생자스로 버튼
+        //        document.getElementsByClassName('btn')[0].addEventListener(에베베)
+
+        // 2. j쿼리로 버튼
+        //        $('.btn').on('click',function(){
+        //            띄워주셈
+        //            
+        //        })
+        //---------------------------------
+        // 3. 애니메이션을 만들기 ㄱㄴ함
+        // 1. 생자스로 버튼누르면 안녕 하나 없애기
+        document.getElementsByClassName('btn')[0].addEventListener('click', function() {
+            document.getElementsByClassName('greeting')[0].style.display = 'none'
+        });
+
+        // 2. j쿼리로 버튼누르면 안녕 없애기
+        $('.btn').on('click', function() {
+            $('.greeting').hide();
+        })
+
+        /*말고도 많은애들 있음
+        show 
+        slideUp
+        ...
+        */
+
+        
+    </script>
+
+
+</body></html>

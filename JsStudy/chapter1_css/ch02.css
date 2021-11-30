@@ -1,0 +1,18 @@
+.alert-box {/*ch02, ch06*/
+    background: #b6b6f0;
+    color : white;
+    padding: 20px;
+    border-radius: 5px;
+    /*  미리 디자인해놓고 숨김  */
+    display: none;
+}
+
+/*ch06*/
+.alert-box p{
+    display: inline;
+}
+
+/*ch06*/
+.yellow-bg {
+    background: yellow;
+}

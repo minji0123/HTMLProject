@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<!--JavaScript의 목적
+    1. 웹서버, 모바일앱, 머신러닝...
+    **2. 웹개발** 원조임
+            html의 조작과 변경을 위해서 사용-->
+
+<body>
+    <!--1. js로 html 조작하는법-->
+    <h2 id="hello">안녕하세요</h2>
+    <h2 id="hi">올때메로나</h2>
+
+    <!-- 2. 여기다가 js코드 적어주면 됨  -->
+    <script>
+        // 3. 얘네가 셀렉터임!
+        //document.getElementById('???').??? = '???';
+        document.getElementById('hello').innerHTML = '안녕';
+            // 문서(html).(~의)html요소를 가져와 id에서의('hello').(~의)내부글자를
+            // html문서의 요소 id(hello)의 내부글자를 가져와서 '안녕'으로 바꿔줘
+        
+        // 얘는 색깔도 바꿀 수 있음
+        document.getElementById('hello').style.color = 'blue';
+        // 색, 사이즈, 마진, 패딩 등등 왠만한거는 다 바꿀 수 있음
+        // 근데 이거를 다 외울 수는 없으니까 구글링ㄱㄱ
+        
+        
+        
+        document.getElementById('hi').innerHTML = '올때바밤바';
+        document.getElementById('hi').style.fontSize = "30px";
+    </script>
+</body></html>

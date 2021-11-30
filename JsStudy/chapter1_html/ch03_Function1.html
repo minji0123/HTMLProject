@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="../chapter1_css/ch02.css" rel="stylesheet">
+</head>
+<!--    
+함수쓰는이유
+1. 긴 코드를 깔끔하게 한 단어로 축약 가능
+2. 함수 업그레이드하고 싶으면 파라미터 -> 코드 양 줄일 수 있음
+-->
+
+<body>
+
+    <div class="alert-box" id="alert">
+        <p>Alert 박스</p>
+        <button onclick="알림창닫기()">닫기</button>
+    </div>
+
+    <button onclick="알림창열기()">버튼</button>
+
+    <script>
+        //    function 아무렇게나작명(){
+        //        긴 코드~~
+        //        긴 코드~~
+        //        긴 코드~~
+        //    }
+
+        function 알림창열기() {
+            document.getElementById('alert').style.display = 'block';
+        }
+
+        function 알림창닫기() {
+            document.getElementById('alert').style.display = 'none';
+        }
+    </script>
+
+
+</body></html>

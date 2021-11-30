@@ -1,0 +1,22 @@
+
+.main-background {/*ch08*/
+    background-image: url(../image/girl.jpg);
+    background-size: cover;
+    color: white;
+}
+
+.black-background {/*ch08*/
+    background: rgba(0,0,0,0.5); /*좀 까맣게 하고 싶음*/
+    position:fixed; /*  모든 요소를 투과해서 앞에 고정이 될듯  */
+    z-index: 5; /* 부트스트랩이 1부터 4까지 쓰고있음*/
+    width:100%;
+    height:100%;
+}
+
+.white-background {/*ch08*/
+    background: white;
+    width:80%;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
+}

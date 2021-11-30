@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="../chapter1_css/ch02.css" rel="stylesheet">
+</head>
+<!--    
+UI만드는 법 : (모달, ALERT, 탭, 툴팁, 서브메뉴, 경고문, 캐러셀...등등)
+    1. 미리 디자인해놓고 숨김
+    2. 원할때 js를 이용해서 (버튼 누르거나 하면) 보여줌
+-->
+
+<body>
+<!-- class에다가 미리 디자인해놓고 display: none 으로 숨김;
+-->
+    <div class="alert-box" id="alert">
+        <p>Alert 박스</p>
+        <br>
+        <!--    onclick : 안에 있는 자바스크립트를 실행해달라~~~   -->
+        <button 
+           onclick="document.getElementById('alert').style.display = 'none';">
+            닫기
+        </button>
+
+    </div>
+
+
+
+    <!--    onclick : 안에 있는 자바스크립트를 실행해달라~~~   -->
+<!--
+    <button onclick="저거 alert 박스를 좀 보여주셈">버튼</button>
+-->
+
+    <button onclick="document.getElementById('alert').style.display = 'block';">
+        버튼
+    </button>
+    <!--  근데 너무 길다. ㅇㅈ??
+    이렇게 한 줄로 자바스크립트를 작성하지 않으려고 함수를 쓴다.  -->
+
+    <script>
+
+
+    </script>
+</body></html>

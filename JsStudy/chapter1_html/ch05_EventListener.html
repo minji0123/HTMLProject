@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="../chapter1_css/ch02.css" rel="stylesheet">
+</head>
+
+<!--
+[EventListener]
+    1. html부분 <여기 안에 js한글자도 안쓰고도 기능개발 가능>
+    2. html을 수정하면 안될 때 
+-->
+
+<body>
+    <!--eventlistener-->
+    <div class="alert-box" id="alert">
+        <p id="title">Alert 박스</p>
+        <button id="close"> X </button>
+
+    </div>
+    <!------------------------------------------------------------------------------------->
+
+    <!--  여기에 onclick안쓰고 (js하나도 안쓰고도) 기능 개발 가능함 -->
+    <button onclick="알림창1열기('아이디입력ㄱ')">아이디버튼</button>
+    <button onclick="알림창1열기('비번입력ㄱ')">비번버튼</button>
+
+    <script>
+        function 알림창1열기(구멍) {
+            //1. 제목바꾸기
+            document.getElementById('title').innerHTML = 구멍;
+            //2. 열기
+            document.getElementById('alert').style.display = 'block';
+        }
+
+
+        function 클래스랑아이디차이(구멍) {
+            // class명이 alert-box인거 전부 찾아라, 찾은거 여려개 중 0 번째를 선택하셈
+            document.getElementsByClassName('alert-box')[0].innerHTML = '아이디입력ㄱ';
+        }
+
+
+        //--------------------------------------------------------------------------------------
+        // EventListener
+//        document.getElementById('작동원하는id').addEventListener('이벤트', function() {
+//            document.getElementById('부모id').style.display = 'none';
+//        });
+
+                            // 이 요소가               // click되면은 (<-얘가 이벤트)  
+        document.getElementById('close').addEventListener('click', function() {
+            //{이 코드 실행해주셈}
+            document.getElementById('alert').style.display = 'none';
+        });
+
+
+        /*
+        이벤트는 많은 종류가 있음
+            클릭하거나, 키보드 누르거나, 스크롤하거나, 마우스 갖다대거나...
+            click,      keydown,        scroll,     mouseover...
+        구글링ㄱㄱ
+        */
+    </script>
+
+
+</body></html>
