@@ -39,3 +39,22 @@
 .nav-sub {/*ch08*/
     display: none;
 }
+
+
+
+.btn-primary {
+    float: left;
+}
+
+.btn-danger {
+    float: left;
+    margin-left: 5px;
+}
+
+#email-alert {
+    display: none;
+}
+
+#psw-alert {
+    display: none;
+}
