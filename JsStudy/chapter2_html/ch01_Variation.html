@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link href="../chapter1_css/ch08.css" rel="stylesheet">
+    <script src="../chapter1_js/jquery-3.6.0.min.js"> </script>
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+    <!--모달창-->
+    <!--   얘로 배경전체를 투명 검정으로 바꾸고-->
+    <div class="black-background">
+        <!--  얘로 모달창 디자인하기    -->
+        <div class="white-background">
+            <p>로그인하세요</p>
+
+            <!--ch09 모달창 안에 form, input추가-->
+            <form>
+                <div class="form-group">
+                    <input id="email" type="email" class="form-control" placeholder="Email">
+                    <p id="email-alert">이메일이 안보여요!</p>
+                </div>
+
+                <div class="form-group">
+                    <input id="psw" type="password" class="form-control" placeholder="Password">
+                    <p id="psw-alert">비밀번호가 안보여요!</p>
+                </div>
+                <button type="submit" class="btn btn-primary">전송</button>
+            </form>
+
+            <button class="btn btn-danger">닫기</button>
+            <div style="clear:both;"></div>
+        </div>
+    </div>
+
+
+
+    <!--  [Listgroup] nav메뉴 만들기-->
+    <div class="nav-menu">
+        <h4 style="margin: 0">Shirts Studio</h4>
+        <a id="nav-sub-button">Products</a>
+    </div>
+
+    <!--  nav메뉴의 모달창 만들기 -->
+    <ul class="list-group nav-sub">
+        <li class="list-group-item">Outer</li>
+        <li class="list-group-item">InnerWear</li>
+        <li class="list-group-item">Shirts</li>
+    </ul>
+
+    <!--[Jumbotron]-->
+    <div class="jumbotron main-background">
+        <h1 class="display-4">Shirts Studio</h1>
+        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <a id="login" class="btn btn-primary btn-lg" href="#" role="button">Log In</a>
+    </div>
+
+
+    <!--ch09 if else-->
+    <!--    <input id="test-input">-->
+
+    <script>
+        $('#login').on('click', function() {
+            $('.black-background').fadeIn();
+        });
+
+        $('#nav-sub-button').click(function() {
+            $('.nav-sub').slideToggle();
+        });
+
+        $('.btn-danger').click(function() {
+            $('.black-background').fadeOut();
+        });
+
+        // 변수에 셀렉터 넣기도 ㄱㄴ
+        var 이메일안내창 = $('#email-alert');
+        // 자바스크립트는 html요소를 찾는데 시간이 오래걸림
+        // 그래서 변수에 넣어주면은 바로바로 꺼내서 사용할 수 있기 때문에 빨라짐
+
+        $('form').on('submit', function(e) {
+            if ($('#email').val() == '') {
+                e.preventDefault();
+                이메일안내창.fadeIn();
+            } else if ($('#psw').val() == '') {
+                e.preventDefault();
+                $('#psw-alert').fadeIn();
+            }
+        });
+
+
+        // 변수, 상수 (var, let, const)
+        var 이름 = 'John kjdlfkj dlskflskj flsakjfk';
+        var 나이 = 10;
+        let 나이 = 10;
+        const 나이 = 10;
+        /*
+        변수    재선언   재할당
+        var    0        0
+        let    x        0
+        const  x        x
+        
+        재선언 : let나이; x
+        재할당 : 나이=20; x
+        */
+        /*
+        범위
+        var : function
+        let, const : {}
+        */
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
