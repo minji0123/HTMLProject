@@ -40,6 +40,14 @@
     justify-content: space-between;
     padding: 15px;
     align-items: center;
+    /*투명해야 합니당1!*/
+    background-color: transparent;
+    /*스크롤할때 멈춰있어야합니당!1*/
+    position: fixed;
+    /*앞/뒤로 보내야 할 수도 있으니까 일단 5만큼 부여해줌*/
+    z-index: 5;
+    width: 100%;
+    color: white;
 }
 
 .nav-sub {
@@ -122,4 +130,18 @@
     left: 0;
     width: 40px;
     margin-left: 10px;
+}
+
+.nav-black {
+    background: white;
+    color: black;
+}
+
+.large-logo {
+    font-size: 20px;
+    transition: all 0.5s;
+}
+
+.small-logo {
+    font-size: 16px;
 }
