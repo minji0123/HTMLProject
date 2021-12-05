@@ -1,0 +1,125 @@
+
+.main-background {
+    background-image: url(../image/girl.jpg);
+    background-size: cover;
+    color: white;
+    border-radius: 0px;
+}
+
+.black-background {
+    background: rgba(0,0,0,0.5);
+    position:fixed;
+    z-index: 5; 
+    width:100%;
+    height:100%;
+    /*채신문법 transition*/
+    display: block;
+    transition: all 1.5s;
+/*    margin-top: -900px;*/
+    transform: translateY(-1000px);
+    /*애니메이션에 margin, width, position, left, right, height 금지!!*/
+    /*transform을 사용합시다.*/
+    /*
+    transform: translate();
+        translateX는 x축이동 Y는 y축이동
+    transform: rotate();
+    transform: scale():
+    */
+}
+
+.white-background {
+    background: white;
+    width:80%;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    align-items: center;
+}
+
+.nav-sub {
+    display: none;
+}
+
+
+
+.btn-primary {
+    float: left;
+}
+
+.btn-danger {
+    float: left;
+    margin-left: 5px;
+}
+
+#email-alert {
+    display: none;
+}
+
+#psw-alert {
+    display: none;
+}
+
+#nav-sub-button {
+    cursor: pointer;
+}
+
+.left-menu {
+    width: 150px;
+    height: 100%;
+    background: black;
+    color:white;
+    /*  왼쪽에 붕 뜨게 되는 문법이었음 기억안남(스크롤해도 고정됨)  */
+    position: fixed;
+    /*요소를 숨기기 위해서 (애니메이션 만들려규)*/
+    margin-left: -150px;
+    /*이제 자바스크립에서 0px로 바꿔주면 메뉴가나오겠지??*/
+    
+}
+
+/*
+.slide-down {
+    display: none;
+    transform: translateY(0px);
+}
+*/
+
+.slide-box {
+    /*  vw:viewport width로부터 100%를 차지하게 해주셈여 */
+    width: 100vw;
+    float: left;
+}
+
+.slide-container {
+    width: 300vw;
+    /*얘를 왼쪽으로 이동시키는 css속성
+    transform: translateX(-100vw);*/
+    /*all이 아니라 transform으로 하면 더 빠르게 작도함*/
+    transition: transform 1s;
+}
+
+.slide-box img {
+    width: 100%;
+}
+
+.slide-next {
+    /*그림 위에 버튼이 와야 하니까 position으로 배치하기*/
+    position: absolute;
+    top: 45%;
+    right: 0;
+    width: 40px;
+    margin-right: 10px;
+}
+
+.slide-before {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 40px;
+    margin-left: 10px;
+}

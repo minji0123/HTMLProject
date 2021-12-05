@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link href="../chapter2_css/ch03.css" rel="stylesheet">
+    <script src="../chapter1_js/jquery-3.6.0.min.js"> </script>
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+
+    <!-- 왼쪽 메뉴 만들었음(애니메이션으로 서서히 튀어나오게할거임)   -->
+    <div class="left-menu">
+        <p>Menu Title</p>
+    </div>
+
+
+    <!--모달창-->
+    <!--   얘로 배경전체를 투명 검정으로 바꾸고-->
+    <div class="black-background slide-down">
+        <!--  얘로 모달창 디자인하기    -->
+        <div class="white-background">
+            <p>로그인하세요</p>
+            <!--ch09 모달창 안에 form, input추가-->
+            <form>
+                <div class="form-group">
+                    <input id="email" type="email" class="form-control" placeholder="Email">
+                    <p id="email-alert">이메일이 안보여요!</p>
+                </div>
+
+                <div class="form-group">
+                    <input id="psw" type="password" class="form-control" placeholder="Password">
+                    <p id="psw-alert">비밀번호가 안보여요!</p>
+                </div>
+                <button type="submit" class="btn btn-primary">전송</button>
+            </form>
+
+            <button class="btn btn-danger">닫기</button>
+            <div style="clear:both;"></div>
+        </div>
+    </div>
+
+
+
+    <!--  [Listgroup] nav메뉴 만들기-->
+    <div class="nav-menu">
+        <h4 style="margin: 0">Shirts Studio</h4>
+        <a id="nav-sub-button">Products</a>
+    </div>
+
+    <!--  nav메뉴의 모달창 만들기 -->
+    <ul class="list-group nav-sub">
+        <li class="list-group-item">Outer</li>
+        <li class="list-group-item">InnerWear</li>
+        <li class="list-group-item">Shirts</li>
+    </ul>
+
+    <!--[Jumbotron]-->
+    <div class="jumbotron main-background">
+        <h1 class="display-4">Shirts Studio</h1>
+        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <a id="login" class="btn btn-primary btn-lg" href="#" role="button">
+            Log In
+        </a>
+        <!-- 메뉴 나오게 할 버튼 만들어줌 -->
+        <a id="show-menu" class="btn btn-danger btn-lg" href="#" role="button">
+            Show Menu
+        </a>
+    </div>
+
+
+    <script>
+        // transition으로 하는 방법!!
+        /*스무스하게 만들기 위해서는
+        애니메이션에 margin, width, position, left, right, height 금지!!
+        */
+
+        $('#login').on('click', function() {
+            $('.black-background').css('transform', 'translateY(0px)');
+        });
+
+        $('#nav-sub-button').click(function() {
+            $('.nav-sub').slideToggle();
+        });
+
+        $('.btn-danger').click(function() {
+            $('.black-background').css('transform', 'translateY(-1000px)');
+        });
+
+        // 변수에 셀렉터 넣기
+        var 이메일안내창 = $('#email-alert');
+
+        $('form').on('submit', function(e) {
+//             if ($('#email').val() == '') {
+//             e.preventDefault();
+//             이메일안내창.fadeIn();
+//             } else if ($('#psw').val() == '') {
+//             e.preventDefault();
+//             $('#psw-alert').fadeIn();
+//             }
+            var 입력한이메일 = $('#email').val();
+            var 이메일체크 = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+([^<>()\.,;:\s@\"]{2,}|[\d\.]+))$/;
+            var 입력한패스워드 = $('#psw').val();
+
+            if (이메일체크.test(입력한이메일) == false) {
+                e.preventDefault();
+            } else if (입력한이메일 == '') {
+                e.preventDefault();
+                이메일안내창.fadeIn();
+            }
+
+
+            // 비번에 대문자 들어갔는지 체크하기
+            if (/[A-Z]+/.test(입력한패스워드) == false) {
+                e.preventDefault();
+            }
+
+
+        });
+
+
+        // /정규식/
+        // 지금 abcdefg 문자에 abc가 들어있음여??
+        /abc/.test('abcdefg');
+        // 결과는 boolean이니까, if문 조건식에 넣기 ㄱㄴ함여
+        /[A-z]/.test('sae'); // A부터 z까지(모든 영어글자)
+
+
+        /\S/.test('ㄴ'); // \s: 특수문자 포함 모든 문자(딱 하나!)
+        // 모든 문자 다음에 골벵이가 오는지 확인해보기
+        /\S@/.test('t@');
+
+        // \S에 +를 붙여주면은 모든 문자를 찾아준다.
+        // \특수문법기호들을 escape처리(알지??)
+        /* 정규식으로 이메일 형식 체크하기
+        sdfsd@naver.com
+        모든문자@모든문자.모든문자*/
+        /\S+@\S+\.\S+/.test('sso02027@naver.com');
+
+
+        // 메뉴나오는 자바스크립트ㄱㄱ(스르르륽)
+        $('#show-menu').click(function() {
+
+            $('.left-menu').animate({
+                marginLeft: '0px',
+            }, 1000);
+        });
+
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
