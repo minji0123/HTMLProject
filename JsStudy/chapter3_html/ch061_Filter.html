@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="../chapter1_js/jquery-3.6.0.min.js"> </script>
+    <link href="../chapter3_css/ch03.css" rel="stylesheet">
+
+    <title>Hello, world!</title>
+</head>
+
+
+<!--웹 개발 방식 2가지
+1. 서버가 html 파일 완성된거를 유저에게 보내는 방식 
+2. 서버가 빈 html파일 + 데이터를 보내고, 그 다음에 js를 이용해서 채워넣기  --얘를 사용할거고 웹앱 트랜드이기도함
+-->
+<body>
+<br>
+<h1 style="text-align: center;">array of object</h1>
+<br>
+<div class="card-group container">
+  <div class="card">
+    <img src="https://via.placeholder.com/600">
+    <div class="card-body">
+      <h5 class="title">Card title</h5>
+      <p class="price">가격 : 70000</p>
+      <button class="btn btn-danger">주문하기</button>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://via.placeholder.com/600">
+    <div class="card-body">
+      <h5 class="title">Card title</h5>
+      <p class="price">가격 : 70000</p>
+      <button class="btn btn-danger">주문하기</button>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://via.placeholder.com/600">
+    <div class="card-body">
+      <h5 class="title">Card title</h5>
+      <p class="price">가격 : 70000</p>
+      <button class="btn btn-danger">주문하기</button>
+    </div>
+  </div>
+</div>
+
+<div class="container my-4">
+<button class="btn btn-danger" id="sortPrice">가격순정렬</button>
+</div>
+
+<!--얘를 서버가 보낸 쇼핑몰 상품데이터라고 가정하고 공부ㄱㄱ-->
+<script>
+  var products = [
+    { id : 0, price : 70000, title : 'Blossom Dress' },
+    { id : 1, price : 50000, title : 'Springfield Shirt' },
+    { id : 2, price : 60000, title : 'Black Monastery' }
+  ];
+    
+    /*오늘 배울거는 sort */
+        /*array 자료에 필터를 주고 싶을 때! filter쓰면되는데
+        
+        얘는 신문법이여서 변수 선언한담에 써야함*/
+    
+    var 어레이 = [7,3,5,2,40];
+    var 뉴어레이 = 어레이.filter(function(a){
+        return a < 4;
+    });
+    
+        /*array 자료에 전부 뭐 해주고 싶으면 map()*/
+    어레이.map(function(){
+        return a*2;
+    })
+    
+    
+    
+    // 버튼 누르면은 정렬되게 했구
+    $('#sortPrice').click(function(){
+        products.sort(function(a,b){
+            return a.price - b.price;
+        })
+   
+
+    // 그다음에 데이터바인딩ㄱㄱ
+    $('.title').eq(0).html(products[0].title);
+    $('.price').eq(0).html('가격 : ' + products[0].price);
+    
+    $('.title').eq(1).html(products[1].title);
+    $('.price').eq(1).html('가격 : ' + products[1].price);
+    
+    $('.title').eq(2).html(products[2].title);
+    $('.price').eq(2).html('가격 : ' + products[2].price);        
+});
+
+</script>
+
+</body></html>
+

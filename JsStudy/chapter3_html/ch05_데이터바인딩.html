@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="../chapter1_js/jquery-3.6.0.min.js"> </script>
+    <link href="../chapter3_css/ch03.css" rel="stylesheet">
+
+    <title>Hello, world!</title>
+</head>
+
+
+<!--웹 개발 방식 2가지
+1. 서버가 html 파일 완성된거를 유저에게 보내는 방식 
+2. 서버가 빈 html파일 + 데이터를 보내고, 그 다음에 js를 이용해서 채워넣기  --얘를 사용할거고 웹앱 트랜드이기도함
+-->
+<body>
+<br>
+<h1 style="text-align: center;">array of object</h1>
+<br>
+<div class="card-group container">
+  <div class="card">
+    <img src="https://via.placeholder.com/600">
+    <div class="card-body">
+      <h5 class="title">Card title</h5>
+      <p class="price">가격 : 70000</p>
+      <button class="btn btn-danger">주문하기</button>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://via.placeholder.com/600">
+    <div class="card-body">
+      <h5 class="title">Card title</h5>
+      <p class="price">가격 : 70000</p>
+      <button class="btn btn-danger">주문하기</button>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://via.placeholder.com/600">
+    <div class="card-body">
+      <h5 class="title">Card title</h5>
+      <p class="price">가격 : 70000</p>
+      <button class="btn btn-danger">주문하기</button>
+    </div>
+  </div>
+</div>
+
+<!--얘를 서버가 보낸 쇼핑몰 상품데이터라고 가정하고 공부ㄱㄱ-->
+<script>
+    // var products = [{:},{:},{:}] ---array안에 object
+  var products = [
+    { id : 0, price : 70000, title : 'Blossom Dress' },
+    { id : 1, price : 50000, title : 'Springfield Shirt' },
+    { id : 2, price : 60000, title : 'Black Monastery' }
+  ];
+    
+    // 데이터 바인딩 : 얘를 쟤로 바꿔주세여
+    
+    // class가 title인 애를 바꿀고임
+    $('.title').eq(0).html(products[0].title);
+    $('.price').eq(0).html('가격 : ' + products[0].price);
+    
+    $('.title').eq(1).html(products[1].title);
+    $('.price').eq(1).html('가격 : ' + products[1].price);
+    
+    $('.title').eq(2).html(products[2].title);
+    $('.price').eq(2).html('가격 : ' + products[2].price);
+    
+</script>
+
+</body></html>
+

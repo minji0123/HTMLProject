@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="../chapter1_js/jquery-3.6.0.min.js"> </script>
+    <link href="../chapter3_css/ch03.css" rel="stylesheet">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+    <!--
+    이번에는 html을 동적으로 자바스크립트로 짜서 넣었었는데, 옵션이 너므 많으면 하드코딩하게 되어버린다.-->
+
+    <form class="container my-5">
+        <div class="form-group">
+            <p>상품선택</p>
+            <!-- select 박스는 input이랑 비슷한데, option 태그로 글을 넣을 수 있다.-->
+            <select class="form-control" id="option1">
+                <option>상품선택</option>
+                <option>바지</option>
+                <option>셔츠</option>
+            </select>
+
+            <div class="size-select">
+                <!-- 사이즈 선택 창은 셔츠를 골랐을 때만 보이게 할 것이다. -->
+                <p class="mt-4">사이즈 선택</p>
+                <select class="form-control" id="option2">
+                </select>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        var 사이즈 = [26, 28, 30, 32, 34, 36];
+        $('#option1').on('change', function() {
+
+
+            if ($('#option1').val() == '바지') {
+                // $('#option2').html('');
+
+                /*1. 일반적인 for문*/
+//                for (var i = 0; i < 사이즈.length; i++) {
+//                    var 템플릿 = `<option>${사이즈[i]}</option>`;
+//                    $('#option2').append(템플릿);
+//                }
+
+                /*2. for each 반복문*/
+                사이즈.forEach(function(i) {
+                    // array 자료 개수만큼 반복해주셈 이라는 뜻임
+                    // 그래서 6번 반복해줌
+                    // i 값은 사이즈 안에 있는 하나하나의 데이터
+                    var 템플릿 = `<option>${i}</option>`; // 여기다가는 []해주면 안됨
+                    $('#option2').append(템플릿)
+                });
+            }
+        });
+    </script>
+
+
+</body></html>
+

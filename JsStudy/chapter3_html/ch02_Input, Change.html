@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="../chapter1_js/jquery-3.6.0.min.js"> </script>
+    <link href="../chapter3_css/ch02.css" rel="stylesheet">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+    <form class="container my-5">
+        <div class="form-group">
+            <p>상품선택</p>
+            <!-- select 박스는 input이랑 비슷한데, option 태그로 글을 넣을 수 있다.-->
+            <select class="form-control" id="option1">
+                <option>모자</option>
+                <option>셔츠</option>
+            </select>
+
+            <div class="size-select">
+                <!-- 사이즈 선택 창은 셔츠를 골랐을 때만 보이게 할 것이다. -->
+                <p class="mt-4">사이즈 선택</p>
+                <select class="form-control" id="option2">
+                    <option>95</option>
+                    <option>100</option>
+                    <option>105</option>
+                </select>
+            </div>
+        </div>
+    </form>
+    <script>
+        /*저기 select 인풋에서 셔츠라는 값을 선택하면 밑에 그 ui를 보여줌.*/
+
+        /*select의 form event설명 
+        
+        $('어떤인풋').on('input',function(){
+         이거도 마찬가지인데, 진짜 바뀌기만할때
+        })
+        
+        $('어떤인풋').on('change',function(){
+         안에 뭔 값이 바뀔때 사용함. 얘는 바꾸고 딴데를 클릭할때
+        })
+        
+        */
+        $('#option1').on('change', function() {
+            //만약에 사용자가 선택한 값이 셔츠인 경우에, 밑에 그 ui를 보여줌
+
+            if ($('#option1').val() == '셔츠') {
+                $('.size-select').show();
+            } else {
+                $('.size-select').hide();
+            }
+        })
+    </script>
+
+
+</body></html>
