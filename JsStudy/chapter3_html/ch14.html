@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="../chapter1_js/jquery-3.6.0.min.js"> </script>
+    <link href="../chapter3_css/ch10.css" rel="stylesheet">
+
+    <title>Hello, world!</title>
+</head>
+
+<!--타이핑 되는 효과 만들기-->
+
+<body>
+
+<div>
+    <button>버튼</button>
+    <h1>abcde</h1>
+    <h2>qwert</h2>
+    <h3>abcde</h3>
+
+
+</div>
+    
+    <script>
+        
+         /*1초 후에 콘솔 창에 11111이 출력됨*/
+//    setTimeout(function(){
+//        console.log(11111);
+//    },1000)
+        
+        /*
+    버튼을 누르면 0.5초에 한번씩 h1내용이 바뀌어야 함
+    그니까
+    h1을 먼저 빈칸으로 만들구
+    0.5초 후에 a를 h1안에 입력, 0.5초 후에 b를 더함..
+    */
+        var h1태그 = document.querySelector('h1'); // 이거는 h1태그 전체
+        var 원래글씨1 = document.querySelector('h1').innerHTML; // 이거는 안에 있는 글씨
+        // getElement랑 같음. 근데 queryS는 쌩자바스크립트버전임
+        var h2태그 = document.querySelector('h2'); // 이거는 h1태그 전체
+        var 원래글씨2 = document.querySelector('h2').innerHTML; // 이거는 안에 있는 글씨
+
+        
+    $('button').click(function(){
+        /*h1을 먼저 빈칸으로 만들구 */
+        h1태그.innerHTML = '';  //        $('h1').html('');얘로 해도 됨
+
+        
+        /*0.5초 후에 a를 h1안에 입력*/
+        setTimeout(function(){
+//            h1태그.innerHTML += 'a';
+            h1태그.innerHTML = h1태그.innerHTML + 'a';
+        },500);
+        
+        /*0.5초 후에 b를 h1안에 입력*/
+        setTimeout(function(){
+//            h1태그.innerHTML += 'a';
+            h1태그.innerHTML = h1태그.innerHTML + 'b';
+        },1000);
+    });
+        // 근데 위에있는애들은 닥봐도 너무 하드코딩이지
+     $('button').click(function(){
+        /*h1을 먼저 빈칸으로 만들구 */
+        h2태그.innerHTML = '';  //        $('h1').html('');얘로 해도 됨
+
+        
+        setTimeout(function(){
+            h2태그.innerHTML += 원래글씨2[0];
+        },500);
+        
+        setTimeout(function(){
+            h2태그.innerHTML += 원래글씨2[1];
+        },1000);
+    });
+        
+        
+        
+        var h3태그 = document.querySelector('h3'); 
+        var 원래글씨3 = document.querySelector('h3').innerHTML; 
+        $('button').click(function(){
+            h3태그.innerHTML = ''; 
+            for (let i=0; i<원래글씨3.length; i++){
+                setTimeout(function(){
+                h3태그.innerHTML += 원래글씨3[i];
+                },i*500);
+            };
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
