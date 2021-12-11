@@ -1,4 +1,4 @@
-<!doctype html>
+ch<!doctype html>
 <html lang="en">
 
 <head>
@@ -52,6 +52,8 @@
 
 <div class="container my-4">
 <button class="btn btn-danger" id="sortPrice">가격순정렬</button>
+<button class="btn btn-primary" id="abc">가나다순</button>
+<button class="btn btn-primary" id="filter">6만원이하</button>
 </div>
 
 <!--얘를 서버가 보낸 쇼핑몰 상품데이터라고 가정하고 공부ㄱㄱ-->
@@ -62,45 +64,74 @@
     { id : 2, price : 60000, title : 'Black Monastery' }
   ];
     
-    /*오늘 배울거는 sort */
+    /*array 값 공유 안되게 사본생성하는 법*/
+//    var 어레이 = [1,2,3];
+//    var 어레이2 = [...어레이]; // spread operator
     
-    var 어레이 = [7,3,5,2,40];
-    // 어레이.sort();
-    // .sort는 문자정렬함수여서 정렬이 잘 안된다.
-    어레이.sort(function(a,b){
-        return a - b;
-    });
+    바인딩();
     
-    
-    
-    /*sort 함수 동작원리
-    1. a,b는 array안의 데이터들
-    2. +를 return하면은 오른쪽에 a를, 왼쪽에 b를 보냄
-    3. -를 return하면은 반대로
-    
-    그래서 b - a 하면은 내림차순
-    */
-
-    /*sort 문자정렬 찾아보기*/
     
     // 버튼 누르면은 정렬되게 했구
     $('#sortPrice').click(function(){
         products.sort(function(a,b){
             return a.price - b.price;
         })
+        
+    바인딩();
+        
+});
+
+    // 가나다순 정렬
+    $('#abc').click(function(){
+        products.sort(function(a,b){
+            if (a.title < b.title == true){
+            return -1; 
+            // 가<나 해서 true면 음수ㄱㄱ
+            // +를 리턴하면 b를 왼쪽
+            // -를 리턴하면 b를 오른쪽
+            }else{
+                return 1;
+            }
+        });
    
 
     // 그다음에 데이터바인딩ㄱㄱ
-    $('.title').eq(0).html(products[0].title);
-    $('.price').eq(0).html('가격 : ' + products[0].price);
-    
-    $('.title').eq(1).html(products[1].title);
-    $('.price').eq(1).html('가격 : ' + products[1].price);
-    
-    $('.title').eq(2).html(products[2].title);
-    $('.price').eq(2).html('가격 : ' + products[2].price);        
+    바인딩();
+        
 });
+    
+    // 6만원이하 정렬
+    $('#filter').click(function(){
+        // 1. 버튼을 누르면 products를 필터함 -> 그럼 [{}{}]만 남음
+        var 새상품 = products.filter(function(){
+            
+            return a.price <=60000;
+        });
+        console.log(새상품);
+        
+        // 2. 새상품 갯수에 맞게 상품목록 html 생성
+        새상품.forEach(function(a){
+            var template = `<div>${a.title} ${a.price}</div>`;
+            $('card-group').append(template);
+        });     
+        
+    };
+                      
+        
+    // 이거를 var 바인딩 = function(){}; 이렇게 적으면 맨 위에서 선언해야됨
+    function 바인딩() {
+        $('.title').eq(0).html(products[0].title);
+        $('.price').eq(0).html('가격 : ' + products[0].price);
 
+        $('.title').eq(1).html(products[1].title);
+        $('.price').eq(1).html('가격 : ' + products[1].price);
+
+        $('.title').eq(2).html(products[2].title);
+        $('.price').eq(2).html('가격 : ' + products[2].price); 
+    };
+    
+
+    
 </script>
 
 </body></html>

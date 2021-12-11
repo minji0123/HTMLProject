@@ -52,6 +52,8 @@
 
 <div class="container my-4">
 <button class="btn btn-danger" id="sortPrice">가격순정렬</button>
+<button class="btn btn-primary" id="abc">가나다순</button>
+<button class="btn btn-primary" id="filter">5만원이하</button>
 </div>
 
 <!--얘를 서버가 보낸 쇼핑몰 상품데이터라고 가정하고 공부ㄱㄱ-->
@@ -77,7 +79,14 @@
         return a*2;
     })
     
+    $('.title').eq(0).html(products[0].title);
+    $('.price').eq(0).html('가격 : ' + products[0].price);
     
+    $('.title').eq(1).html(products[1].title);
+    $('.price').eq(1).html('가격 : ' + products[1].price);
+    
+    $('.title').eq(2).html(products[2].title);
+    $('.price').eq(2).html('가격 : ' + products[2].price); 
     
     // 버튼 누르면은 정렬되게 했구
     $('#sortPrice').click(function(){

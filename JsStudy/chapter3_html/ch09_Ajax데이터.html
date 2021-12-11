@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="../chapter1_js/jquery-3.6.0.min.js"> </script>
+    <link href="../chapter3_css/ch03.css" rel="stylesheet">
+
+    <title>Hello, world!</title>
+</head>
+
+
+<body>
+
+    <!--Ajax-->
+
+    <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    <button class="btn btn-danger">상품보여주기</button>
+
+    <script>
+        // 버튼을 누르면 ajax 요청을 하고, 받아온 데이터를 Card에 넣어줌
+        $('.btn-danger').click(function() {
+            $.ajax({
+                url: 'https://codingapple1.github.io/data.json',
+                type: 'GET'
+            }).done(function(데이터) {
+                console.log(데이터);
+                $('.card-title').html(데이터.model);
+                $('.card-text').html(데이터.price);
+                $('.card-img-top').attr('src', 데이터.img);
+            });
+
+        });
+
+        
+        데이터.data[0].brand
+        
+
+        {
+            data: [{
+                    brand: 'Hyundai',
+                    model: 'Kona',
+                    price: 30000,
+                    img: 'https://codingapple1.github.io/kona.jpg'
+                },
+                {
+                    brand: 'Hyundai',
+                    model: 'Kona',
+                    price: 30000,
+                    img: 'https://codingapple1.github.io/kona.jpg'
+                },
+
+                {
+                    brand: 'Hyundai',
+                    model: 'Kona',
+                    price: 30000,
+                    img: 'https://codingapple1.github.io/kona.jpg'
+                },
+            ]
+        }
+        
+        // ajax안에도 세부 기능들이 많음
+        //        $.ajax({
+        //            url: 'https://naver.com',
+        //            type: 'GET'
+        ////            data: '얘는 지금은 안씀'
+        //        }).fail(function() {
+        //            // 요청이 실패했을 때
+        //
+        //        }).always(function() {
+        //            // 얘는 실패하든 성공하든 항상
+        //            // 로딩중같은거
+        //        });
+    </script>
+
+
+
+</body></html>

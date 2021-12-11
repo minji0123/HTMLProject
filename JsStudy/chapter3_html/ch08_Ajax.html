@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="../chapter1_js/jquery-3.6.0.min.js"> </script>
+    <link href="../chapter3_css/ch03.css" rel="stylesheet">
+
+    <title>Hello, world!</title>
+</head>
+
+
+<body>
+
+    <!--Ajax
+서버에 요청을 할 때 새로고침 없이 데이터를 주고받을 수 있게 도와줌-->
+
+    서버 : 접속자가 요청을 하면 데이터를 갖다줌
+
+    요청(request)
+    get요청 : url에다가 정보를 때려받아서 하는 요청 -- 읽기
+    post요청 : (로그인할때) 정보 숨겨서 요청 -- 쓰기
+
+    ajax : 서버에다가 요청을 할 수 있게 도와주는데, 새로고침 없이 가능
+    ajax요청할때는 j쿼리 라이브러리 사용함
+
+    <h4 id="hello">임시글씨</h4>
+    <button class="btn btn-danger">버튼</button>
+
+    <script>
+        // naver.com아다가 get요청함
+        //  $.ajax({
+        //      url : 'https://naver.com',
+        //      type : 'GET'
+        //  });
+
+        //        $.ajax({
+        //            url: 'https://codingapple1.github.io/hello.txt',
+        //            type: 'GET'
+        //        }).done(function(데이터){
+        //            console.log(데이터);
+        //        });
+
+
+        // 버튼을 누르면 ajax 요청을 하고, 받아온 데이터를 h4 태그에 넣음
+        $('.btn-danger').click(function() {
+            $.ajax({
+                url: 'https://codingapple1.github.io/hello.txt',
+                type: 'GET'
+            }).done(function(데이터) {
+                $('#hello').html(데이터);
+            });
+
+        });
+    </script>
+
+
+
+</body></html>
