@@ -39,6 +39,7 @@
     /* 7-1 margin collapse 방지 
         : 부모박스에 padding 해주셈_테두리 안붙게 해줌(안쪽 여백)*/
     padding: 1px;
+    
     position: relative;
 }
 

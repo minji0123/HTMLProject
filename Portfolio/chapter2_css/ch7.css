@@ -1,0 +1,284 @@
+div,
+input,
+textarea {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: 'Nanum Gothic', sans-serif;
+    color: #393D3F;
+}
+/*nav바*/
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    align-items: center;
+    background-color: transparent;
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    color: white;
+}
+
+.nav-sub {
+    display: none;
+}
+
+
+
+/*스크롤할때 반응하는 nav바*/
+.nav-black {
+    background: white;
+    color: #393D3F;
+}
+
+.large-logo {
+    font-size: 40px;
+    transition: all 0.5s;
+}
+
+.small-logo {
+    font-size: 36px;
+}
+
+
+/*배경화면*/
+.main-background-port {
+    width: 100%;
+    height: 500px;
+    background-image: url(../image/portfolio-2.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: cover;
+    background-position: center;
+    padding: 1px;
+    position: relative;
+}
+
+.main-title {
+    color: aliceblue;
+    font-size: 40px;
+    margin-top: 180px;
+    margin-right: 100px;
+    letter-spacing: 2px;
+    text-align: right;
+}
+
+.para-letter {
+    color: aliceblue;
+    font-size: 26px;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin-right: 100px;
+    text-align: right;
+}
+
+
+.explain-box {
+    width: 80%;
+    max-width: 600px;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #eee;
+    position: relative;
+    top: -60px;
+    border-radius: 5px;
+}
+
+.explain-box p {
+    margin: 3px;
+    letter-spacing: 2px;
+}
+
+
+
+
+/*contact (날릴예정)*/
+.form-background {
+    background-color: black;
+    padding: 30px;
+}
+
+.form-white {
+    background-color: white;
+    padding: 30px;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.w-50 {
+    width: 50%;
+    float: left;
+    padding: 10px;
+}
+
+.w-100 {
+    width: 100%;
+    padding: 10px;
+}
+
+.form-long {
+    height: 50%;
+    font-size: 17px;
+}
+
+.yellow-button {
+    width: 30%;
+    padding: 10px;
+    display: block;
+    margin-left: auto;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+/*
+.flex-item {
+    width: 100px;
+    height: 100px;
+    background-color: grey;
+    margin: 5px;
+}
+
+.flex-container {
+    display: flex;
+}
+*/
+
+/*font_awesome*/
+.product-contanier {
+    width: 80%;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.product-contanier div {
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+/*ch5_fontAwesome*/
+.product-contanier i {
+    background-color: #D5BBB1;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    padding-top: 25px;
+    box-sizing: border-box;
+    color: white;
+    margin-top: 10px;
+}
+
+
+
+
+/*ch6 css 애니메이션 구현*/
+.shop-bg {
+    background-color: #eee;
+    padding: 20px;
+}
+
+.shop-container {
+    display: flex;
+    width: 90%;
+    margin: auto;
+}
+
+.shop-item {
+    width: 33%;
+    padding: 10px;
+}
+
+.shop-item img {
+    width: 100%;
+    display: block;
+}
+
+/*ch4*/
+@media screen and (max-width: 1200px) {
+    .main-title {
+        font-size: 30px;
+    }
+
+    .nav-item {
+        font-size: 26px;
+    }
+
+    .product-contanier div {
+        width: 50%;
+    }
+
+    .product-contanier {
+        max-width: 600px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-title {
+        font-size: 25px;
+    }
+
+    .product-contanier div {
+        width: 100%;
+    }
+}
+
+
+/*
+많은 사람들이 사용하는 breakpoint를 쓰는게 좋음
+1200px(태블릿) / 992px / 768px(모바일) / 576px(모바일)
+    너무 세분화하지마셈*/
+
+
+
+/*ch7 반쪽만 가려지는 반응형 애니메이션 만들기*/
+.overlay-wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.overlay-wrap:hover .overlay-black {
+    margin-top: 50%;
+}
+
+.overlay-black {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    transition: all 1s;
+    /*  이게 시작화면인데, 다른 속성에도 영향을 미치는게 좀 그렇다.
+            부모 태그에 overflow: hidden 넣어주셈*/
+    margin-top: 100%;
+}
+
+
+.overlay:hover {
+    opacity: 1;
+}
+
+
+/*깃&블로그*/
+
+.record-bg {
+        background-color: #D5BBB1;
+
+}

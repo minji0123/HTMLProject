@@ -16,7 +16,7 @@ body{
 .main-background {
     width: 100%;
     height: 500px;
-    background-image: url(/image/shoes.jpg);
+    background-image: url(../image/shoes.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -60,11 +60,13 @@ body{
 
 .explain-box {
     /* %가 붙으면 부모태그의 % 라고 했음. 그리고 이 태그들의 기본 부모테그는 body임 
-        body의 width는 현재 창임. 창 크기 움직이면 width 바뀜. 그니까 반응형이 되는거임*/
+       그니까 반응형이 되는거임*/
     width: 80%;
-    /* 근데 이 width%는 pc사이즈에서 너무 크대 그래서 max-width로 제어해주는거임
-        max-width 이상으로는 사이즈가 커지지 않음*/
+    /* 근데 이 width%는 pc사이즈에서 너무 큼
+        max-width 이상으로는 사이즈가 안커지게 조절*/
     max-width: 600px;
+    
+    
     /*  아래 명령어를 주면, width가 padding, border까지 고려해줌
         *********얘 태그셀렉터에 적어놓고 개발시작하면 편하대*******/
     box-sizing: border-box;
@@ -74,6 +76,8 @@ body{
     padding: 20px;
     text-align: center;
     background-color: #eee;
+    
+    
     /* 어떻게 하면 위로 겹치게 할 수 있을까 
         position 써서 일단 붕 띄운다음에 위로 올리셈*/
     position: relative;
