@@ -282,3 +282,14 @@ body {
         background-color: #D5BBB1;
 
 }
+
+.para-title {
+    color: color: #393D3F;;
+/*    font-size: 40px;*/
+/*
+    margin-top: 180px;
+    margin-right: 100px;
+*/
+/*    letter-spacing: 2px;*/
+    text-align: center;
+}
