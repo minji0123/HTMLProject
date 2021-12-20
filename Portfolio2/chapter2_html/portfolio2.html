@@ -40,54 +40,55 @@
         <div style="margin:-3px;"></div>
         <div class="main-background">
             <h3 class="main-title">가민지's Portfolio</h3>
-            <p class="para-title">Wanna be A <strong>Full-Stack-Developer</strong></p>
+            <p id="p" class="para-title">Wanna be A Full-Stack-Developer</p>
+
+            <script>
+                var pTag = document.getElementById('p');
+                var originL = document.getElementById('p').innerHTML;
+
+
+                $('.main-title').click(function() {
+                    pTag.innerHTML = '';
+
+
+                    for (let i = 0; i < originL.length; i++) {
+                        setTimeout(function() {
+                            pTag.innerHTML += originL[i];
+                        }, i * 100);
+                    };
+
+                });
+            </script>
+
             <hr style="color: aliceblue;">
 
             <div class="main-letter">
                 <button id="button" type="button">More info?</button>
-                <div style="margin-bottom: 15px;"></div>
+                <div id="more-info" style="display: none;">
+                    <div style="margin-bottom: 40px;"></div>
 
-                <p id="p1" style="margin:1px;">
-                    기계공학을 졸업 후, 컴퓨터공학을 공부 중인 가민지입니다.</p>
-                <p id="p2" style="margin:1px; ">
-                    수습기간동안 재직했던 자동차 데이터 분석 연구소의 업무 경험을 계기로</p>
-                <p id="p3" style="margin:1px; ">
-                    컴퓨터공학과 코딩에 관심을 갖게 되었습니다.</p>
+                    <p style="margin:1px;">
+                        기계공학을 졸업 후, 컴퓨터공학을 공부 중인 가민지입니다.</p>
+                    <p style="margin:1px; ">
+                        수습기간동안 재직했던 자동차 데이터 분석 연구소의 업무 경험을 계기로</p>
+                    <p style="margin:1px; ">
+                        컴퓨터공학과 코딩에 관심을 갖게 되었습니다.</p>
+                </div>
             </div>
             <script>
-                var pTag1 = document.getElementById('p1');
-                var pTag2 = document.getElementById('p2');
-                var pTag3 = document.getElementById('p3');
-
-                var originL1 = document.getElementById('p1').innerHTML;
-                var originL2 = document.getElementById('p2').innerHTML;
-                var originL3 = document.getElementById('p3').innerHTML;
+                var clickBool = false;
 
                 $('button').click(function() {
-                    pTag1.innerHTML = '';
-                    pTag2.innerHTML = '';
-                    pTag3.innerHTML = '';
-                    
-                    for (let i = 0; i < originL1.length; i++) {
-                        setTimeout(function() {
-                            pTag1.innerHTML += originL1[i];
-                        }, i * 100);
-                    };
-                    for (let i = 0; i < originL2.length; i++) {
-                        setTimeout(function() {
-                            pTag2.innerHTML += originL2[i];
-                        }, i * 100);
-                    };
-                    for (let i = 0; i < originL3.length; i++) {
-                        setTimeout(function() {
-                            pTag3.innerHTML += originL3[i];
-                        }, i * 100);
-                    };
+
+                    if (clickBool === false) {
+                        $('#more-info').fadeIn();
+                        clickBool = true;
+                    } else {
+                        $('#more-info').fadeOut();
+                        clickBool = false;
+                    }
                 });
-
             </script>
-
-
 
         </div>
     </div>
@@ -186,13 +187,31 @@
                             <a href="https://gallery-k.tistory.com/" class="link-deco">
                                 <div class="work-white-box">
 
-                                    <img src="../image/tistory-logo-fill.svg" style="width: 30%">
+                                    <h3 class="project-title">개인 블로그</h3>
+                                    <div class="row">
+                                    <div class="col-4"></div>
+                                    <div class="col-4">
+                                    <img src="../image/tistory-logo-fill.svg" style="width: 100%; ">
+                                    </div>
+                                    <div class="col-4"></div>
+                                    </div>
                                     <hr>
-                                    <ul class="para-letter">
 
-                                        <li>취업준비를 하며 공부한 내용을 정리한 블로그입니다.</li>
-                                        <li>기계공학과 관련된 내용, 코딩과 관련된 내용이 정리되어 있습니다.</li>
+
+                                    <ul class="para-letter" style="text-align: left;">
+                                        <li>취업준비를 하며 공부한 내용을 정리한 블로그.</li>
+                                        <li>기계공학과 관련된 내용, 코딩과 관련된 내용 정리.</li>
                                     </ul>
+                                    <div style="margin:30px"></div>
+
+                                    <p class="work-title">포스팅 내용</p>
+                                    <ul class="para-letter" style="text-align: left;">
+                                        <li>일반기계기사 공부 팁, 공식 정리</li>
+                                        <li>공조냉동기계기사 공부 팁, 공식 정리</li>
+                                        <li>Java, SQL, Html 코드 정리</li>
+                                    </ul>
+
+
                                 </div>
                             </a>
                         </div>
@@ -200,11 +219,32 @@
                         <div class="col-6">
                             <a href="https://github.com/minji0123" class="link-deco">
                                 <div class="work-white-box">
-                                    <img src="../image/pngegg.png" style="width: 40%; margin: -5%;">
 
+                                    <h3 class="project-title">Git&Github</h3>
+                                    <div class="row">
+                                    <div class="col-4"></div>
+                                    <div class="col-4" >
+                                    <img src="../image/pngegg.png"  style="width: 100%">
+                                    </div>
+                                    <div class="col-4"></div>
+
+                                    </div>
                                     <hr>
-                                    <li>코딩 공부를 하며 적었던 코드들을 모아놓은 저장소입니다.</li>
-                                    <li>개인 프로젝트와 관련된 코드가 저장되어 있습니다.</li>
+
+                                    <ul class="para-letter" style="text-align: left;">
+
+                                        <li>코딩 공부를 하며 적었던 코드들을 모아놓은 저장소.</li>
+                                        <li>개인, 단체 프로젝트와 관련된 코드가 저장.</li>
+                                    </ul>
+                                    <div style="margin:20px"></div>
+                                    
+                                    <p class="work-title">포스팅 내용</p>
+                                    <ul class="para-letter" style="text-align: left;">
+                                        <li>Java, Html, SQL 코드 정리</li>
+                                        <li>개인, 단체 프로젝트를 위한 도메인</li>
+                                        <li>CodeWiki를 위한 도메인</li>
+                                    </ul>
+
                                 </div>
                             </a>
                         </div>
@@ -321,6 +361,9 @@
         </div>
     </div>
 
+
+
+
     <!--여기까지가 본문 container-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
@@ -328,6 +371,4 @@
     <!-- tistory svg 출처 :   https://marshall-ku.tistory.com/134-->
     <!-- github png 출처 : https://www.pngegg.com/ko/png-zquiq/download-->
 
-</body>
-
-</html>
+</body></html>

@@ -88,13 +88,13 @@
         */
         /*만약에 패스워드도 빈칸일경우, 이메일과 똑같이 처리함!*/
         // ch09 if else
-        $('form').on('submit', function(e) {
-            if ($('#email').val() == '') {
-                e.preventDefault();
-                $('#email-alert').fadeIn();
-            } else if ($('#psw').val() == '') {
-                e.preventDefault();
-                $('#psw-alert').fadeIn();
+            $('form').on('submit', function(e) {
+                if ($('#email').val() == '') {
+                    e.preventDefault();
+                    $('#email-alert').fadeIn();
+                } else if ($('#psw').val() == '') {
+                    e.preventDefault();
+                    $('#psw-alert').fadeIn();
             }
         });
 

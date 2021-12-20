@@ -3,6 +3,10 @@
 body {
     color: #393D3F;
     background: #f7f9fc;
+/*    font-family: 'Do Hyeon', sans-serif;*/
+    font-family: 'Nanum Gothic', sans-serif;
+
+
 }
 
 .white-box {
@@ -16,11 +20,9 @@ body {
     background: rgb(255, 243, 176, 0.5);
 }
 
-
 .grey-box {
     background: rgb(193, 193, 193, 0.5);
 }
-
 
 body:before {
     content: '';
@@ -75,13 +77,6 @@ button:hover:after {
     transition: 800ms ease all;
 }
 
-
-
-
-
-
-
-
 .main-background {
     width: 100%;
     height: 800px;
@@ -97,21 +92,21 @@ button:hover:after {
 
 
 
+
 .main-title {
     color: aliceblue;
     font-family: 'Black Han Sans', sans-serif;
     font-size: 110px;
     margin-top: 300px;
     text-align: center;
+    cursor: pointer
 }
 
 .para-title {
     color: aliceblue;
     font-size: 25px;
-    font-family: sans-serif;
-    font-family: 'Nanum Gothic', sans-serif;
-    letter-spacing: 2px;
-    /*    letter-spacing: 4px;*/
+    font-family: 'Do Hyeon', sans-serif;
+    letter-spacing: 4px;
     text-align: center;
 }
 
@@ -120,6 +115,12 @@ button:hover:after {
     font-family: 'Black Han Sans', sans-serif;
     font-size: 36px;
     margin-bottom: -10px;
+}
+.work-title{
+    margin: 0px;
+    font-family: 'Do Hyeon', sans-serif;
+    text-align: center;
+    font-size: 26px;
 }
 
 .middle-title {
@@ -137,6 +138,11 @@ button:hover:after {
 }
 
 
+
+
+
+
+
 .main-letter {
     color: aliceblue;
     font-size: 20px;
@@ -152,7 +158,7 @@ button:hover:after {
     font-family: 'Nanum Gothic', sans-serif;
     font-weight: 700;
     letter-spacing: 2px;
-    text-align: left;
+    text-align: center;
 
 }
 
