@@ -2,11 +2,11 @@
 
 body {
     color: #393D3F;
-    background: #f7f9fc;
+/*    background: #f7f9fc;*/
 /*    font-family: 'Do Hyeon', sans-serif;*/
     font-family: 'Nanum Gothic', sans-serif;
-
-
+    box-sizing: border-box;
+    margin: 0px;
 }
 
 .white-box {
@@ -31,7 +31,7 @@ body:before {
     vertical-align: middle;
 }
 
-button {
+#button {
     background: #1AAB8A;
     color: #fff;
     border: none;
@@ -47,13 +47,13 @@ button {
 
 }
 
-button:hover {
+#button:hover {
     background: #fff;
     color: #1AAB8A;
 }
 
-button:before,
-button:after {
+#button:before,
+#button:after {
     content: '';
     position: absolute;
     top: 0;
@@ -64,18 +64,19 @@ button:after {
     transition: 400ms ease all;
 }
 
-button:after {
+#button:after {
     right: inherit;
     top: inherit;
     left: 0;
     bottom: 0;
 }
 
-button:hover:before,
-button:hover:after {
+#button:hover:before,
+#button:hover:after {
     width: 100%;
     transition: 800ms ease all;
 }
+
 
 .main-background {
     width: 100%;
@@ -239,7 +240,7 @@ button:hover:after {
     margin-right: 2px;
     margin-bottom: 5px;
     transition:
-        background 1s, transform 0.5s;
+        background 0.5s, transform 0.3s;
 }
 
 .pill:hover {
@@ -250,6 +251,59 @@ button:hover:after {
 
 .mec-pill:hover {
     background: rgb(255, 243, 176, 0.5);
+}
+
+
+
+
+
+
+.form-background {
+    background-color: black;
+    padding: 30px;
+}
+
+.form-white {
+    background-color: white;
+    padding: 30px;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.w-50 {
+    width: 50%;
+    float: left;
+    padding: 10px;
+}
+
+.w-100 {
+    width: 100%;
+    padding: 10px;
+}
+
+.form-long {
+    height: 50%;
+    font-size: 17px;
+}
+
+.yellow-button {
+    width: 30%;
+    padding: 10px;
+    display: block;
+    margin-left: auto;
+    border: 1px solid black;
+    border-radius: 5px;
+/*    background-color: ;*/
+/*    color: white;*/
 }
 
 

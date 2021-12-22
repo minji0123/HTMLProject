@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
     <link href="../chapter1_css/normalize.css" rel="stylesheet">
     <link href="../chapter1_css/ch15.css" rel="stylesheet">
 </head>
-    <!-- 1. 오늘은 표만들기 <table>-->
-    <!-- 2. 행은 가로줄이고, 열은 세로줄임  
+<!-- 1. 오늘은 표만들기 <table>-->
+<!-- 2. 행은 가로줄이고, 열은 세로줄임  
             가로 먼저 그리고, 세로를 그 다음에 그림-->
+
 <body>
     <div>
         <!-- 8. <table>은 기본적으로 틈이 존재함. 그래서 없애주는게 좋음-->
@@ -20,12 +22,15 @@
                 <tr>
                     <!-- 9. 셀 안의 요소 상하정렬 
                             vertical-align 세로정렬할 때 쓰긴 하지만...-->
-                    <th><p>dddd</p><p>dddd</p></th>
+                    <th>
+                        <p>dddd</p>
+                        <p>dddd</p>
+                    </th>
                     <td style="vertical-align: top">2222</td>
                     <td>33333</td>
                 </tr>
             </thead>
-            
+
             <tbody>
                 <tr>
                     <th>1</th>
@@ -33,7 +38,7 @@
                     <td>3</td>
                 </tr>
             </tbody>
-            
+
             <!-- 가로줄tr: table row | 세로줄td: table data -->
             <!-- 3. 지금 가로줄 하나 만들었음 -->
             <tr>
@@ -45,22 +50,54 @@
             </tr>
         </table>
     </div>
-            
-    
+
+
     <div>
-            <!-- 9-1 글씨들간의 세로정렬할 때 vertical-align 씀
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        <p>dddd</p>
+                        <p>dddd</p>
+                    </th>
+                    <td style="vertical-align: top">2222</td>
+                    <td>33333</td>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+            </tbody>
+
+            <tr>
+                <th>1</th>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+        </table>
+    </div>
+
+
+
+
+    <div>
+        <!-- 9-1 글씨들간의 세로정렬할 때 vertical-align 씀
                         (inline/inline-block 요소 간 세로정렬)
                         display: inline 항상 옆으로 채워지는 폭과 너비가 없는 요소 rgrg? -->
-            <p style="font-size: 50px">greetings<span style="font-size: 20px; vertical-align: bottom">안녕</span></p>
-            <!-- 글자끼리는 super(위첨자_ 부모테그있을때 사용), top 이런거들 많으니까 한번 눌러서 실험해보셈 -->
+        <p style="font-size: 50px">greetings<span style="font-size: 20px; vertical-align: bottom">안녕</span></p>
+        <!-- 글자끼리는 super(위첨자_ 부모테그있을때 사용), top 이런거들 많으니까 한번 눌러서 실험해보셈 -->
     </div>
-    
-    
-        <!-- 9-2 글자랑 그림이랑 크기 맞추고 싶다. -->
-    <div> 
+
+
+    <!-- 9-2 글자랑 그림이랑 크기 맞추고 싶다. -->
+    <div>
         <img src="https://mdn.mozillademos.org/files/12245/frame_image.svg" width="32" height="32"> <span style="vertical-align: top">image with a default alignment.</span>
     </div>
-            
+
 
     <!-- 10. div 태그로 표만들기 (굳이 쓸 필요ㄴㄴ) -->
     <div style="display: table">
@@ -70,6 +107,7 @@
             <div style="display: table-cell"></div>
         </div>
     </div>
-    
+
 </body>
+
 </html>

@@ -36,62 +36,60 @@
 
 <body>
 
-    <div>
-        <div style="margin:-3px;"></div>
-        <div class="main-background">
-            <h3 class="main-title">가민지's Portfolio</h3>
-            <p id="p" class="para-title">Wanna be A Full-Stack-Developer</p>
+    <div class="main-background">
+        <h3 class="main-title">가민지's Portfolio</h3>
+        <p id="p" class="para-title">Wanna be A Full-Stack-Developer</p>
 
-            <script>
-                var pTag = document.getElementById('p');
-                var originL = document.getElementById('p').innerHTML;
+        <script>
+            var pTag = document.getElementById('p');
+            var originL = document.getElementById('p').innerHTML;
 
 
-                $('.main-title').click(function() {
-                    pTag.innerHTML = '';
+            $('.main-title').click(function() {
+                pTag.innerHTML = '';
 
 
-                    for (let i = 0; i < originL.length; i++) {
-                        setTimeout(function() {
-                            pTag.innerHTML += originL[i];
-                        }, i * 100);
-                    };
+                for (let i = 0; i < originL.length; i++) {
+                    setTimeout(function() {
+                        pTag.innerHTML += originL[i];
+                    }, i * 100);
+                };
 
-                });
-            </script>
+            });
+        </script>
 
-            <hr style="color: aliceblue;">
+        <hr style="color: aliceblue;">
 
-            <div class="main-letter">
-                <button id="button" type="button">More info?</button>
-                <div id="more-info" style="display: none;">
-                    <div style="margin-bottom: 40px;"></div>
+        <div class="main-letter">
+            <button id="button" type="button">More info?</button>
+            <div id="more-info" style="display: none;">
+                <div style="margin-bottom: 40px;"></div>
 
-                    <p style="margin:1px;">
-                        기계공학을 졸업 후, 컴퓨터공학을 공부 중인 가민지입니다.</p>
-                    <p style="margin:1px; ">
-                        수습기간동안 재직했던 자동차 데이터 분석 연구소의 업무 경험을 계기로</p>
-                    <p style="margin:1px; ">
-                        컴퓨터공학과 코딩에 관심을 갖게 되었습니다.</p>
-                </div>
+                <p style="margin:1px;">
+                    기계공학을 졸업 후, 컴퓨터공학을 공부 중인 가민지입니다.</p>
+                <p style="margin:1px; ">
+                    수습기간동안 재직했던 자동차 데이터 분석 연구소의 업무 경험을 계기로</p>
+                <p style="margin:1px; ">
+                    컴퓨터공학과 코딩에 관심을 갖게 되었습니다.</p>
             </div>
-            <script>
-                var clickBool = false;
-
-                $('button').click(function() {
-
-                    if (clickBool === false) {
-                        $('#more-info').fadeIn();
-                        clickBool = true;
-                    } else {
-                        $('#more-info').fadeOut();
-                        clickBool = false;
-                    }
-                });
-            </script>
-
         </div>
+        <script>
+            var clickBool = false;
+
+            $('button').click(function() {
+
+                if (clickBool === false) {
+                    $('#more-info').fadeIn();
+                    clickBool = true;
+                } else {
+                    $('#more-info').fadeOut();
+                    clickBool = false;
+                }
+            });
+        </script>
+
     </div>
+
     <!--여기까지가 background-->
 
 
@@ -189,11 +187,11 @@
 
                                     <h3 class="project-title">개인 블로그</h3>
                                     <div class="row">
-                                    <div class="col-4"></div>
-                                    <div class="col-4">
-                                    <img src="../image/tistory-logo-fill.svg" style="width: 100%; ">
-                                    </div>
-                                    <div class="col-4"></div>
+                                        <div class="col-4"></div>
+                                        <div class="col-4">
+                                            <img src="../image/tistory-logo-fill.svg" style="width: 100%; ">
+                                        </div>
+                                        <div class="col-4"></div>
                                     </div>
                                     <hr>
 
@@ -222,11 +220,11 @@
 
                                     <h3 class="project-title">Git&Github</h3>
                                     <div class="row">
-                                    <div class="col-4"></div>
-                                    <div class="col-4" >
-                                    <img src="../image/pngegg.png"  style="width: 100%">
-                                    </div>
-                                    <div class="col-4"></div>
+                                        <div class="col-4"></div>
+                                        <div class="col-4">
+                                            <img src="../image/pngegg.png" style="width: 100%">
+                                        </div>
+                                        <div class="col-4"></div>
 
                                     </div>
                                     <hr>
@@ -234,10 +232,10 @@
                                     <ul class="para-letter" style="text-align: left;">
 
                                         <li>코딩 공부를 하며 적었던 코드들을 모아놓은 저장소.</li>
-                                        <li>개인, 단체 프로젝트와 관련된 코드가 저장.</li>
+                                        <li>개인, 단체 프로젝트와 관련된 코드 저장.</li>
                                     </ul>
                                     <div style="margin:20px"></div>
-                                    
+
                                     <p class="work-title">포스팅 내용</p>
                                     <ul class="para-letter" style="text-align: left;">
                                         <li>Java, Html, SQL 코드 정리</li>
@@ -258,110 +256,240 @@
     <!--    여기까지가 main container-->
 
 
+    <div>
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-3">
 
-    <div class="container mt-4">
-        <div class="row">
-            <div class="col-md-3">
+                    <div class="white-box" id="scroll-lock">
+                        <h4 class="middle-title">Skills</h4>
+                        <hr>
+                        <p style="margin: 2px;">Front-end</p>
+                        <span class="pill">HTML</span>
+                        <span class="pill">CSS</span>
+                        <span class="pill">BootStrap</span>
+                        <span class="pill">JavaScript</span>
+                        <span class="pill">J-Query</span>
+                        <span class="pill">React</span>
 
-                <div class="white-box" id="scroll-lock">
-                    <h4 class="middle-title">Skills</h4>
-                    <hr>
-                    <p style="margin: 2px;">Front-end</p>
-                    <span class="pill">HTML</span>
-                    <span class="pill">CSS</span>
-                    <span class="pill">BootStrap</span>
-                    <span class="pill">JavaScript</span>
-                    <span class="pill">J-Query</span>
-                    <span class="pill">React</span>
+                        <div style="margin: 10px"></div>
+                        <p style="margin: 2px;">Back-end</p>
+                        <span class="pill">Java</span>
+                        <span class="pill">Spring</span>
+                        <span class="pill">SQL</span>
+                        <span class="pill">Python</span>
+                        <hr>
+                        <div style="margin: 10px"></div>
+                        <p style="margin: 2px;">Mechanical-Technology</p>
+                        <span class="pill mec-pill">티그용접</span>
+                        <span class="pill mec-pill">아크용접</span>
+                        <span class="pill mec-pill">6-시그마</span>
+                        <div style="margin: 10px"></div>
+                        <p style="margin: 2px;">Mechanical-Design</p>
+                        <span class="pill mec-pill">Catia</span>
+                        <span class="pill mec-pill">Inventor</span>
 
-                    <div style="margin: 10px"></div>
-                    <p style="margin: 2px;">Back-end</p>
-                    <span class="pill">Java</span>
-                    <span class="pill">Spring</span>
-                    <span class="pill">SQL</span>
-                    <span class="pill">Python</span>
-                    <hr>
-                    <div style="margin: 10px"></div>
-                    <p style="margin: 2px;">Mechanical-Technology</p>
-                    <span class="pill mec-pill">티그용접</span>
-                    <span class="pill mec-pill">아크용접</span>
-                    <span class="pill mec-pill">6-시그마</span>
-                    <div style="margin: 10px"></div>
-                    <p style="margin: 2px;">Mechanical-Design</p>
-                    <span class="pill mec-pill">Catia</span>
-                    <span class="pill mec-pill">Inventor</span>
+                        <div style="margin-bottom: 20px;"></div>
+                        <h4 class="middle-title">Certificate</h4>
+                        <hr>
+                        <span class="pill mec-pill">일반기계기사</span>
+                        <!--                    <img src="../image/02mec.jpg" class="d-block w-100" alt="...">-->
+                        <!--                    <div style="margin-top: 3px"></div>-->
 
-                    <div style="margin-bottom: 20px;"></div>
-                    <h4 class="middle-title">Certificate</h4>
-                    <hr>
-                    <span class="pill mec-pill">일반기계기사</span>
-                    <!--                    <img src="../image/02mec.jpg" class="d-block w-100" alt="...">-->
-                    <!--                    <div style="margin-top: 3px"></div>-->
-
-                    <span class="pill mec-pill">공조냉동기계기사</span>
-                    <!--                    <img src="../image/01ice.jpg" class="d-block w-100" alt="...">-->
+                        <span class="pill mec-pill">공조냉동기계기사</span>
+                        <!--                    <img src="../image/01ice.jpg" class="d-block w-100" alt="...">-->
+                    </div>
                 </div>
-            </div>
 
 
-            <div class="col-md-9" id="scroll-nonlock">
-                <div class="white-box">
-                    <h4 class="middle-title">Project</h4>
-                    <hr>
+                <div class="col-md-9">
+                    <div class="white-box">
+                        <h4 class="middle-title">Project</h4>
+                        <hr>
 
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="row white-box yellow-box">
-
-                                <h3 class="project-title">2016 KSAE 대학생 자작 자동차 대회</h3>
-                                <div class="col-lg-7 col-md-12">
-                                    <img src="../image/2016_kase.png" style="width: 100%; ">
-                                </div>
-
-                                <div class="col-lg-5 col-md-12">
-                                    <div class="project-letter">
-                                        15년도부터 18년도까지 활동했던 자작자동차 동아리 활동
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row white-box yellow-box">
+                                    <h3 class="project-title">Team Scud 동아리 활동</h3>
+                                    <div class="col-lg-7 col-md-12">
+                                        <img src="../image/activity01.png" style="width: 100%; ">
                                     </div>
-                                    <div>
-                                        <hr>
+
+                                    <div class="col-lg-5 col-md-12">
+                                        <div class="project-letter">
+                                            15년도부터 18년도까지 활동했던 자작자동차 동아리 활동
+                                        </div>
+                                        <div>
+                                            <hr>
+                                        </div>
+                                        <ul>
+                                            <li>주요활동</li>
+                                            <li></li>
+                                            <li></li>
+                                        </ul>
                                     </div>
-                                    <ul>
-                                        <li>주요활동</li>
-                                        <li></li>
-                                        <li></li>
-                                    </ul>
+                                    <div class="project-bottom"></div>
                                 </div>
-                                <div class="project-bottom"></div>
+                            </div>
 
+                            <div style="margin-bottom: 23px;"></div>
 
+                            <div class="col-12">
+                                <div class="row white-box yellow-box">
+                                    <h3 class="project-title">2016 KSAE 대학생 자작 자동차 대회</h3>
+                                    <div class="col-lg-7 col-md-12">
+                                        <img src="../image/2016_kase.png" style="width: 100%;">
+                                    </div>
+
+                                    <div class="col-lg-5 col-md-12">
+                                        <div class="project-letter">
+                                            한국 자동차 공학회 주관, KSAE 대학생 자작 자동차 대회 EV 부분에서 대상을 수상했습니다.
+                                        </div>
+                                        <div>
+                                            <hr>
+                                        </div>
+                                        <ul>
+                                            <li>주요활동</li>
+                                            <li></li>
+                                            <li></li>
+                                        </ul>
+                                    </div>
+                                    <div class="project-bottom"></div>
+                                </div>
+                            </div>
+
+                            <div style="margin-bottom: 23px;"></div>
+
+                            <div class="col-12">
+                                <div class="row white-box yellow-box">
+                                    <h3 class="project-title">E-Consumer 친환경 공모전 활동</h3>
+                                    <div class="col-lg-7 col-md-12">
+                                        <img src="../image/activity02.png" style="width: 100%;">
+                                    </div>
+
+                                    <div class="col-lg-5 col-md-12">
+                                        <div class="project-letter">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.
+                                        </div>
+                                        <div>
+                                            <hr>
+                                        </div>
+                                        <ul>
+                                            <li>주요활동</li>
+                                            <li></li>
+                                            <li></li>
+                                        </ul>
+                                    </div>
+                                    <div class="project-bottom"></div>
+                                </div>
+                            </div>
+
+                            <div style="margin-bottom: 23px;"></div>
+
+                            <div class="col-12">
+                                <div class="row white-box grey-box">
+                                    <h3 class="project-title">Portfolio 페이지 제작</h3>
+                                    <div class="col-lg-7 col-md-12">
+                                        <img src="../image/myport.png" style="width: 100%; ">
+                                    </div>
+
+                                    <div class="col-lg-5 col-md-12">
+                                        <div class="project-letter">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.
+                                        </div>
+                                        <div>
+                                            <hr>
+                                        </div>
+                                        <ul>
+                                            <li>주요활동</li>
+                                            <li></li>
+                                            <li></li>
+                                        </ul>
+                                    </div>
+                                    <div class="project-bottom"></div>
+                                </div>
+                            </div>
+
+                            <div style="margin-bottom: 23px;"></div>
+
+                            <div class="col-12">
+                                <div class="row white-box grey-box">
+                                    <h3 class="project-title">CodeWiki 사이트 제작</h3>
+                                    <div class="col-lg-7 col-md-12">
+                                        <img src="../image/activity03.png" style="width: 100%; ">
+                                    </div>
+
+                                    <div class="col-lg-5 col-md-12">
+                                        <div class="project-letter">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.
+                                        </div>
+                                        <div>
+                                            <hr>
+                                        </div>
+                                        <ul>
+                                            <li>주요활동</li>
+                                            <li></li>
+                                            <li></li>
+                                        </ul>
+                                    </div>
+                                    <div class="project-bottom"></div>
+                                </div>
                             </div>
                         </div>
 
-                        <div style="margin-bottom: 10px"></div>
-
-                        <div class="col-12">
-                            <div class="white-box grey-box">
-                                <p>컴퓨터공학</p>
-                            </div>
 
 
-
-                            <p style="margin-bottom: 1000px;"></p>
-                        </div>
 
                     </div>
-                    <!--row-->
-
-
-
-
                 </div>
+                <!-- 여기까지가 project -->
+
+
+
+
             </div>
-            <!-- 여기까지가 row -->
         </div>
+
     </div>
 
-
+    <div>
+        <div style="margin: 23px;"></div>
+        <div class="form-background">
+            <div class="form-white">
+                <form>
+                    <div class="w-100">
+                        <h3>Contact Me</h3>
+                        <p>Your Email</p>
+                        <input class="form-input" placeholder="examples@gmail.com" type="email">
+                    </div>
+                    <div class="w-50">
+                        <p>First Name</p>
+                        <input class="form-input" type="text">
+                    </div>
+                    <div class="w-50">
+                        <p>Last Name</p>
+                        <input class="form-input" type="text">
+                    </div>
+                    <div style="clear: both;"></div>
+                    <div class="w-100">
+                        <p>Message</p>
+                        <!-- 클래스 재사용했는데, 스타일이 더 필요하면 class를 더 추가하셈 -->
+                        <textarea class="form-input form-long"></textarea>
+                    </div>
+                    <div>
+                        <!-- label for 랑 input id 랑 문구 맞춰주셈 
+                            그럼 글자누르면 체크박스도 같이 눌러짐-->
+                        <input id="sub" type="checkbox">
+                        <!-- 버튼옆에 글씨 써주려면 span이나 label로 감싼다음에 글쓰면됨 -->
+                        <label for="sub">Subscribe</label>
+                        <div class="w-100">
+                            <button class="yellow-button">SEND</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
 
     <!--여기까지가 본문 container-->

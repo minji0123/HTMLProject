@@ -36,11 +36,14 @@
 
 /*ch09_navbar*/
 /* 이렇게 하면 모든 li 블록들이 해당 태그를 가질 수 있다.*/
+
 /*selector 문법 공백 : ~ 안에 있는 모든 자식*/
 /*selector 문법 > : ~ 안에 있는 직계 자식 ( 하위 태그들_탭 두번 이상에는 적용앙됨) */
+
 .navbar>li{
-    /*  한 줄로 출력 가능  */
+    /*  nav바 한 줄로 출력 가능  */
     display: inline-block;
+    
     width: 60px;
     text-align: center;
     background: #eee;
@@ -57,6 +60,7 @@
 */
 .navbar a{
     font-size: 16px;
+    
     /* a 태그의 밑줄제거 기능 */
     text-decoration: none;
 }
