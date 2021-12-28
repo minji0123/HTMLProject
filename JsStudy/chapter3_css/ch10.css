@@ -18,6 +18,12 @@
  width: 300px;   
 }
 
+
+
+
+
+
+
 .card-background {
     height: 3000px;
     margin-top: 800px;
@@ -29,6 +35,9 @@
     margin: auto;
     max-width: 80%;
 }
+
+
+
 .card-box{
     /*  sticky속성을 그냥주는게아니구 좌표찍어서 줄거임  */
     position: sticky;
