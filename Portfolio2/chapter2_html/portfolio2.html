@@ -18,6 +18,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=PT+Sans&family=Pushster&display=swap" rel="stylesheet">
 
     <script src="../chapter2_css/jquery-3.6.0.min.js"> </script>
 
@@ -222,7 +223,7 @@
                                     <div class="row">
                                         <div class="col-4"></div>
                                         <div class="col-4">
-                                            <img src="../image/pngegg.png" style="width: 100%">
+                                            <img src="../image/1051326.png" style="width: 100%">
                                         </div>
                                         <div class="col-4"></div>
 
@@ -286,7 +287,7 @@
                         <span class="pill mec-pill">6-시그마</span>
                         <div style="margin: 10px"></div>
                         <p style="margin: 2px;">Mechanical-Design</p>
-                        <span class="pill mec-pill">Catia</span>
+                        <span class="pill mec-pill">CATIA</span>
                         <span class="pill mec-pill">Inventor</span>
 
                         <div style="margin-bottom: 20px;"></div>
@@ -305,7 +306,16 @@
                 <div class="col-md-9">
                     <div class="white-box">
                         <h4 class="middle-title">Project</h4>
+                        <div>
+                            <!-- <p>버튼을 클릭해서 프로젝트를 고를 수 있습니다.</p> -->
+                            <button id="mec-btn" class="wrap pro-button">Mechanic</button>
+                            <button id="com-btn" class="wrap pro-button">Computer</button>
+                            <button id="all-btn" class="wrap pro-button">Show All</button>
+                            <div style="clear: both;"></div>
+                        </div>
+                        <div style="clear: both;"></div>
                         <hr>
+                        
 
                         <div class="row">
                             <div class="col-12">
@@ -323,7 +333,7 @@
                                             <hr>
                                         </div>
                                         <ul>
-                                            <li>주요활동</li>
+                                            <p>주요활동</p>
                                             <li></li>
                                             <li></li>
                                         </ul>
@@ -332,7 +342,7 @@
                                 </div>
                             </div>
 
-                            <div style="margin-bottom: 23px;"></div>
+<!--                            <div style="margin-bottom: 23px;"></div>-->
 
                             <div class="col-12">
                                 <div class="row white-box yellow-box">
@@ -349,7 +359,7 @@
                                             <hr>
                                         </div>
                                         <ul>
-                                            <li>주요활동</li>
+                                            <p>주요활동</p>
                                             <li></li>
                                             <li></li>
                                         </ul>
@@ -358,7 +368,6 @@
                                 </div>
                             </div>
 
-                            <div style="margin-bottom: 23px;"></div>
 
                             <div class="col-12">
                                 <div class="row white-box yellow-box">
@@ -375,7 +384,7 @@
                                             <hr>
                                         </div>
                                         <ul>
-                                            <li>주요활동</li>
+                                            <p>주요활동</p>
                                             <li></li>
                                             <li></li>
                                         </ul>
@@ -384,7 +393,8 @@
                                 </div>
                             </div>
 
-                            <div style="margin-bottom: 23px;"></div>
+
+
 
                             <div class="col-12">
                                 <div class="row white-box grey-box">
@@ -395,23 +405,25 @@
 
                                     <div class="col-lg-5 col-md-12">
                                         <div class="project-letter">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.
+                                            <p>Html, CSS, JavaScript 언어를 이용해서 저만의 포트폴리오 웹 사이트를 제작했습니다. </p>
+                                            <p></p>
                                         </div>
                                         <div>
                                             <hr>
                                         </div>
                                         <ul>
-                                            <li>주요활동</li>
-                                            <li></li>
+                                            <p>사용한 언어</p>
+                                            <li>웹페이지 디자인(html, css, js)</li>
                                             <li></li>
                                         </ul>
                                     </div>
                                     <div class="project-bottom"></div>
                                 </div>
                             </div>
+                            
 
-                            <div style="margin-bottom: 23px;"></div>
 
+                           
                             <div class="col-12">
                                 <div class="row white-box grey-box">
                                     <h3 class="project-title">CodeWiki 사이트 제작</h3>
@@ -427,30 +439,42 @@
                                             <hr>
                                         </div>
                                         <ul>
-                                            <li>주요활동</li>
+                                            <p>주요활동</p>
                                             <li></li>
                                             <li></li>
                                         </ul>
                                     </div>
                                     <div class="project-bottom"></div>
+
                                 </div>
+
                             </div>
+
+
                         </div>
-
-
-
-
                     </div>
                 </div>
-                <!-- 여기까지가 project -->
-
-
-
-
             </div>
-        </div>
+            <!-- 여기까지가 project -->
 
+            <script>
+                $('#mec-btn').click(function() {
+                    $('.grey-box').fadeOut();
+                    $('.yellow-box').fadeIn();
+                })
+                $('#com-btn').click(function() {
+                    $('.grey-box').fadeIn();
+                    $('.yellow-box').fadeOut();
+                })
+                $('#all-btn').click(function() {
+                    $('.grey-box').fadeIn();
+                    $('.yellow-box').fadeIn();
+                })
+            </script>
+
+        </div>
     </div>
+
 
     <div>
         <div style="margin: 23px;"></div>
@@ -473,17 +497,13 @@
                     <div style="clear: both;"></div>
                     <div class="w-100">
                         <p>Message</p>
-                        <!-- 클래스 재사용했는데, 스타일이 더 필요하면 class를 더 추가하셈 -->
                         <textarea class="form-input form-long"></textarea>
                     </div>
                     <div>
-                        <!-- label for 랑 input id 랑 문구 맞춰주셈 
-                            그럼 글자누르면 체크박스도 같이 눌러짐-->
                         <input id="sub" type="checkbox">
-                        <!-- 버튼옆에 글씨 써주려면 span이나 label로 감싼다음에 글쓰면됨 -->
                         <label for="sub">Subscribe</label>
                         <div class="w-100">
-                            <button class="yellow-button">SEND</button>
+                            <button class="white-button">SEND</button>
                         </div>
                     </div>
                 </form>
@@ -497,6 +517,5 @@
 
 
     <!-- tistory svg 출처 :   https://marshall-ku.tistory.com/134-->
-    <!-- github png 출처 : https://www.pngegg.com/ko/png-zquiq/download-->
 
 </body></html>
