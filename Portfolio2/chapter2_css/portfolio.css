@@ -315,40 +315,16 @@ body:before {
 
 }
 
-/*
-#mec-btn {
-	color: rgba(30, 22, 54, 0.6);
-	box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset;
-    border: rgba(255, 243, 176, 0.4);
-}
-*/
  .pro-button{
 	color: rgba(30, 22, 54, 0.6);
 	box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset;
     border: rgba(193, 193, 193, 0.4);
 }
-/*
-#all-btn {
-	color: rgba(30, 22, 54, 0.6);
-	box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset;
-    border: rgba(15, 9, 31, 0.4);
-}
-*/
 
-/*
-#mec-btn:hover {
-	box-shadow: rgba(255, 243, 176, 0.4) 0 0px 0px 40px inset;
-}
-*/
 .pro-button:hover {
 	box-shadow: rgba(193, 193, 193, 0.4) 0 0px 0px 40px inset;
 }
-/*
-#all-btn:hover {
-    color: aliceblue;
-	box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 40px inset;
-}
-*/
+
 
 
 
