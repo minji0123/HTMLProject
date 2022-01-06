@@ -1,8 +1,9 @@
 $('#all-button').click(()=>{
     $('#all-box').fadeIn();
     $('#all-button').fadeOut();
-//     $("body").css('background-color', '#f9c51d');
-     $("body").css('background-color', '#f8e2d7');
+//     $("body").css('background-color', '#f8e2d7');
+//     $("body").css('background-color', '#262601');
+     $("body").css('background-color', '#fafafa');
 });
 
 
@@ -92,11 +93,12 @@ $(document).ready(function () {
 //        console.log(높이);
         
         $('#info-box').css("opacity", 0 + $(window).scrollTop() / 400);
+//        $('#info-box').scrollLeft(2)
 
-        $('#work-box').css("opacity", 0 + $(window).scrollTop() / 800);
+        $('#work-box').css("opacity", 0 + $(window).scrollTop() / 1000);
 
-        $('#scroll-lock').css("opacity", 0 + $(window).scrollTop() / 1600);
+        $('#scroll-lock').css("opacity", 0 + $(window).scrollTop() / 2200);
 
-        $('#pro-box').css("opacity", 0 + $(window).scrollTop() / 1600);
+        $('#pro-box').css("opacity", 0 + $(window).scrollTop() / 2200);
     });
 });
