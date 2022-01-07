@@ -1,0 +1,55 @@
+body{
+    margin: 0px;
+    position: relative;
+}
+h3, p{
+    text-align: center;
+}
+.main-background {
+    width: 100%;
+    height: 500px;
+    background-image: url(../images/man.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: saturate(0.7);
+       
+}
+.position{
+    position: absolute;
+}
+
+.main-title {
+    margin-top: 100px;
+    margin-left: 50px;
+    color: aliceblue;
+    font-size: 50px;
+}
+
+.main-letter {
+    margin: 0px;
+    margin-left: 50px;
+    color: aliceblue;
+    text-align: left;
+}
+.width{
+    float:left;
+    width: 30%;
+    margin-right: 50px;
+}
+.para-div {
+    margin-top: 30px;
+}
+
+.para-title {
+    text-align: center;
+}
+
+.btn {
+    margin-left: 30%;
+    margin-right: 30%;
+    display: block;
+/*    position: absolute;*/
+    padding: 10px;
+}
