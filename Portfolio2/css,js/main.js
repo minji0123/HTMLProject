@@ -3,7 +3,8 @@ $('#all-button').click(()=>{
     $('#all-button').fadeOut();
 //     $("body").css('background-color', '#f4e0cc');
 //     $("body").css('background-color', '#262601');
-     $("body").css('background-color', '#fafafa');
+//     $("body").css('background-color', '#fafafa');
+     $("body").css('background-color', '#eff3f7');
 });
 
 

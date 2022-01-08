@@ -7,8 +7,10 @@ body {
     box-sizing: border-box;
     margin: 0px;
     background: lightgrey;
+
 }
-.space{
+
+.space {
     margin: 30px;
 }
 
@@ -35,21 +37,38 @@ body {
 .white-box {
     background: white;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0.5px 0.5px 2px 1px #eee;
+    border-radius: 15px;
+    /*    box-shadow: 0.5px 0.5px 2px 1px #eee;*/
+    box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25), 0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+
 }
 
 .yellow-box {
     /*    background: rgb(193, 193, 193, 0.2);*/
     margin-bottom: 23px;
+    box-shadow: 0.5px 0.5px 2px 1px lightgrey;
+    margin-left: 0px;
+    margin-right: 0px;
+    transition: all .5s;
+}
+.yellow-box:hover {
+    box-shadow: 0.5px 0.5px 2px 1px grey;
 
 }
+
 
 .grey-box {
     /*    background: rgb(193, 193, 193, 0.2);*/
     margin-bottom: 23px;
+    box-shadow: 0.5px 0.5px 2px 1px lightgrey;
+    margin-left: 0px;
+    margin-right: 0px;
+    transition: all .5s;
 }
+.grey-box:hover {
+    box-shadow: 0.5px 0.5px 2px 1px grey;
 
+}
 
 
 #button {
@@ -229,11 +248,16 @@ body {
 .work-white-box {
     background: white;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0.5px 0.5px 2px 1px #eee;
+    border-radius: 15px;
+/*    box-shadow: 0.5px 0.5px 2px 1px #eee;*/
     display: inline-block;
     transition: transform 0.5s;
     height: 500px;
+    box-shadow: 0.5px 0.5px 2px 1px lightgrey;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+    
 
 }
 
@@ -360,11 +384,11 @@ body {
 
 
 table {
-  border-spacing: 8px;
-  border-collapse: separate;
+    border-spacing: 8px;
+    border-collapse: separate;
 }
-table td {
-}
+
+table td {}
 
 
 
