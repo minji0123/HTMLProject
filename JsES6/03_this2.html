@@ -1,0 +1,75 @@
+<button id="잉">잉</button>
+<script>
+
+    //------------------------------------
+    // this 의 뜻(3)_constructor
+    //------------------------------------
+
+    //------------------------------------
+    // constructor 의 this: 기계 안에서 새로 생성되는 object (= instance)
+    //------------------------------------
+    // constructor: object 생성기계
+
+    function 엄마 (이름) {
+        this.name = 이름
+    };
+    
+    let 아가obj1 = new 엄마('아가1');
+    let 아가obj2 = new 엄마('아가2');
+    let 아가obj3 = new 엄마('아가3');
+    
+
+    //------------------------------------
+    // this 의 뜻(4)_eventListener
+    //------------------------------------
+
+
+    //------------------------------------
+    // eventListener 의 this: e.currentTarget(=지금 이벤트가 동작하고 있는 html애)
+    //------------------------------------
+    // document.getElementById('hi').addEventListener('click',function(){
+    //     this; // e.currentTarget
+    // })
+    // e.currentTarget
+    document.getElementById('잉').addEventListener('click',function(e){
+        console.log(this);  
+        console.log(e.currentTarget);
+    });
+
+
+
+
+    //------------------------------------
+    // this 의 뜻 _심화
+    //------------------------------------
+    // let arr1 = [1,2,3];
+    // document.getElementById('hi').addEventListener('click',function(e){
+    //     arr1.forEach(function (a){
+    //         // console.log(a);
+    //         console.log(this);// window 출력됨 왜냐면 전역함수이기 때문이당
+    //     })
+    // });
+
+    let obj1 = {
+        잉:['잉','앙','엥'],
+        함수: function(){
+            obj1.잉.forEach(function(){
+                console.log(this);// window 출력됨 걍 함수안의 this 로 판단되기 때무닝다
+
+            })
+        }
+    }
+    
+    // arrow function 특: this 값안변함. 밖의 this 값 그대로 재사용 ㄱㄴ
+    let obj2 = {
+        잉:['잉','앙','엥'],
+        함수: function(){
+            console.log(this);// 여기의 this 값 그대로 재사용
+            obj1.잉.forEach(()=>{
+                console.log(this); // 엄마obj 출력됨..
+
+            })
+        }
+    }
+
+</script>

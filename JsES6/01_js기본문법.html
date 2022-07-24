@@ -1,0 +1,51 @@
+
+<p id="hello">안녕</p>
+<button id="button">버튼</button>
+<script>
+
+//------------------------------------
+// js는 html 을 조작하기 위한 언어
+//------------------------------------
+
+// 이렇게 정적 조작함
+document.getElementById('hello').innerHTML = '바보';
+
+// 이벤트리스너로 동적 조작 가능
+document.getElementById('button').addEventListener('click',function(){
+    document.getElementById('hello').innerHTML = '바보'
+    바보('바보')
+    
+});
+
+//------------------------------------
+// 변수와 함수도 있음
+//------------------------------------
+
+// 변수는 var let const
+// 변수는 값을 저장해놓는거임
+let 이름 = '버니';
+
+// 함수는 긴 코드를 저장해놓는거임
+function 바보(param){
+    document.getElementById('hello').innerHTML = param;
+};
+
+//------------------------------------
+// 값 여러개 저장하고 싶을때는 array, object
+//------------------------------------
+
+//array
+let 이름arr = ['토끼','버니',[], 바보('바보')];
+이름arr[0];
+
+//object
+let 이름obj = {name:'토끼',nick:'버니'};
+이름obj.name;
+
+// array 에 forEach() 사용
+[1,2,3,4].forEach(function(a){
+    a // a 는 1,2,3,4 임
+});
+
+
+</script>
