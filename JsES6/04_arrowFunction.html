@@ -1,6 +1,24 @@
 <button id="잉">잉</button>
 <script>
 
+    // 함수는
+    // 상자입니다.
+    // 상자에 짐을 넣어놓을 수도 있고 꺼내 쓸 수도 있고
+    // 안에서 뭐 짐을 풀어놓거나 다른 짐이랑 합칠 수도 있어요
+
+    // 함수안에 그냥 데이터만 넣어놓을 수도 있고 데이터만 꺼내 쓸 수도 있고
+    // 파라미터 형태로 값을 넣고 기존의 데이터와 합칠 수도 있어요
+
+
+    // 그래서 함수를 사용하는 이유는요
+    // 1. 긴 코드를 저장
+    // 2. 파라미터 사용하려구
+    
+
+
+
+
+
     // 함수를 사용하는 이유
     // 1. 함수는 긴 코드를 저장해놓는거임
     // 다른데서 재사용하려규
@@ -10,6 +28,9 @@
     function 바보(){
         document.getElementById('잉').innerHTML = '바보';
     };
+
+
+
 
     // 이벤트리스너에서도 사용하고
     document.getElementById('잉').addEventListener('click',function(){
@@ -28,13 +49,15 @@
     // 2. 파라미터 사용하려구
     // 원하는 값을 넣어서 원하는 값을 출력
 
-
     function 더블더하기야(a) {
         return a+a;
     };
 
-    더블더하기야(2);//4
-    더블더하기야(4);//8
+    // 더블더하기야(2);//4
+    // 더블더하기야(4);//8
+
+
+
 
 
 
@@ -42,10 +65,12 @@
     //------------------------------------
     // Arrow Function
     //------------------------------------
+    // 일반함수
     var 함수 = function() {
 
     }
 
+    // arrow function
     var 함수 = () =>{
 
     }
@@ -57,6 +82,12 @@
     // Arrow Function 특징
     //------------------------------------
     // 1. function 보다 직관적이다. (진짜?)
+    // 2. 바깥의 this 값을 내부에서 그대로 사용한다.
+
+
+
+
+    // 1. function 보다 직관적이다. (진짜?)
 
     var 더블더하기야 = (a) => { return a+a };
     var 더블더하기야 = a => { return a+a };
@@ -64,14 +95,25 @@
     // 그치만 이렇게까지 쓰고싶지 않아  
 
 
-    [1,2,3,4].forEach( (a)=>{
-        console.log(a);
-    })
-    [1,2,3,4].forEach( a=>  console.log(a))
+    // [1,2,3,4].forEach( (a)=>{
+    //     console.log(a);
+    // })
+    // [1,2,3,4].forEach( a =>  console.log(a))
 
 
     // 2. 바깥의 this 값을 내부에서 그대로 사용한다.
-    let obj3 = {
+
+    let obj_func = {
+        이름 : {
+            this함수:function () {
+                console.log(this);
+            }
+        }
+        
+    }
+
+
+    let obj_arr = {
         이름 : {
             this함수: ()=> {
                 console.log(this);
@@ -81,12 +123,14 @@
     }
 
 
-    // 이거는 바깥의 this 값d 인 window{} 가 출력된다.
+
+
+    // 이거는 바깥의 this 값인 window{} 가 출력된다.
     document.getElementById('잉').addEventListener('click',function(e){
-        this;
+        console.log(this);
     });
     document.getElementById('잉').addEventListener('click',(e)=>{
-        this;
+        console.log(this);
     });
 
 
