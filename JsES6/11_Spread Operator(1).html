@@ -30,38 +30,39 @@
     let 배열1 = [1,2,3];
     let 배열2 = [4,5];
 
-    let 배열3 = [...a]; // == a deep copy
-    let 배열4 = [...a,...b]; // == a + b
+    let 배열3 = [...배열1];     // == a deep copy
+    let 배열4 = [...배열1,...배열2]; // == a + b deep copy
 
 
     // 2. 오브젝트 합치기 / deep copy
 
-    var o1 = {
+    let o1 = {
         a:1,
         b:2
     };
 
-    var o2 = {
+    let o2 = {
         c:3
     };
 
-    var o3 = {
+    let o3 = {
         ...o1,
         c:3
     };
 
-    var o4 = {...o3};
+    let o4 = {...o3};
 
     // 값 중복이 발생하면 덮어씌워진다.
 
-    var o1 = {
+    let obj1 = {
         a:1,
         b:2
     };
 
-    var o2 = {
-        ...o1,
+    let obj2 = {
+        ...obj1,
         a:2
     };
 
+    console.log("obj2: ",obj2);
 </script>

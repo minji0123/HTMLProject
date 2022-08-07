@@ -1,0 +1,46 @@
+
+<script>
+
+    //------------------------------------
+    // arguments == 인자
+    //------------------------------------
+    let 함수= (a,b,c) => { // <-- 얘가 파라미터
+        console.log(a,b,c); // <-- 얘가 인자
+    }
+
+
+
+    // let 함수1= (a,b,c) => {  // <-- 얘가 파라미터
+    function 함수1(a,b,c){
+        console.log(arguments); 
+        console.log(...arguments); 
+    }
+    함수1(1,2,3)
+
+    // arguments 는 함수 안에 파라미터로 들어온 인자들을
+    // 배열 안에 담아주는 칭구
+    // 진짜 배열에 담는건 아닌데 [] 안에 집어넣어줌
+
+    function 타입판별(a,b,c){ // <-- 얘가 파라미터
+        console.log(typeof arguments);
+        console.log(Array.isArray(arguments) );
+    }
+    타입판별(1,2,3);
+
+
+
+
+    // // 이걸로 만들 수 있는거
+    // // 입력한 파라미터를 전부 콘솔창에 출력해주는 함수 
+    
+    function 함수2(a,b,c){
+        for (let x of arguments){
+            console.log(x);  
+
+        }
+    }
+    함수2(1,2,3);
+
+</script>
+
+
