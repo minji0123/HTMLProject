@@ -1,0 +1,48 @@
+<script>
+
+    //------------------------------------
+    // Constructor
+    //------------------------------------
+    // 비슷한 object 여러 개 만들 때 사용하는 함수
+    // 일정 key 값의 object 를 여러 개 만들 때 사용하는 함수.
+    
+
+
+
+
+    var 사람 = {name:'kim'};
+
+    function 생성자(){// 상속해줄 생성자
+        this.name = 'kim';
+        this.age = 15;
+        this.sayHi = function(){
+            console.log(this.name+' 안녕하세요');
+        }
+    }
+
+    new 생성자();// 상속받은 자식
+
+
+    // 생성자의 this: 새로 생기는 object 그 자체
+    // 메이플 케릭터 생성 시 초기 스탯 처럼
+    // 한 object(메이플케릭) 에 값을 주는고임
+
+
+
+
+
+    // value 값 바꾸기
+    function 생성자2(이름, 나이){
+        this.name = 이름;
+        this.age = 나이;
+        this.sayHi = function(){
+            console.log(this.name+' 안녕하세요');
+        }
+    }
+
+    new 생성자2('김',20);
+
+
+
+
+</script>
