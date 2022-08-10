@@ -1,0 +1,61 @@
+<script>
+    //------------------------------------
+    // ES6_Constructor
+    //------------------------------------
+
+    // 생성자
+    class 생성자 {
+        constructor(){}
+    }
+
+    // 전 생성자를 생각할 때 토끼를 생각합니다.
+    // 예전에 수학귀신을 열시미 읽었거든여
+    // 피보나치 수 설명할 때 토끼 무한생성되는게 너므 매력적이여써ㅠ
+
+
+    class 엄마토끼 {
+        constructor(이름,키=0,무게=0){
+            this.first = '김';
+            this.name = 이름;
+            this.height = 20 + 키;
+            this.weight = 10 + 무게;
+        }
+    }
+    
+    var 아가토끼 = new 엄마토끼('버니',3,2);
+
+    // 엄마토끼 생성자가 아가토끼를 만들었습니다.
+
+    class 엄마토끼 {
+        constructor(이름,키=0,무게=0){
+            this.first = '김';
+            this.name = 이름;
+            this.height = 20 + 키;
+            this.weight = 10 + 무게;
+        }
+        
+    }
+
+
+    class 엄마토끼 {
+        constructor(){
+            this.이름 = '김';
+            this.소개1 = function() {// 여기에 함수 넣으면 상속됨...자식이 쓸 수 이따
+                console.log('우리는 토끼종족');
+            }
+        }
+        소개2(){// 여기에 함수 넣으면 상속앙됨... 엄마토끼 특임
+            console.log('나는 엄마토끼');
+        }
+    }
+
+    var 아가토끼 = new 엄마토끼();
+    Object.getPrototypeOf(아가토끼); // __proto__ 랑 같은 의미
+
+
+    //객체지향 문법을 왜쓸까??
+    // 1. Object 여러개 만들어 쓰려고
+    // 2. 
+
+
+</script>

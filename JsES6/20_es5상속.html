@@ -1,0 +1,29 @@
+<script>
+
+    Object.create();
+
+    var 엄마토끼 = {// 엄마토끼의 부모님은 Object 임
+        이름:'김',
+        색: '하양',
+    };
+
+    // constructor
+    // object.create 는 constructor 아님! 걍 prototype 설정해주는 함수임
+    var 아가토끼 = Object.create(엄마토끼); // <-- 일단 부모님이 누군지 설정만 함.
+    // console.log(아가토끼);  아무것도안나옴
+    // console.log(아가토끼.이름); '김' 나옴
+
+    아가토끼.색 = '검정'
+
+    // console.log(아가토끼);  색 검정 나옴
+    // console.log(아가토끼.이름); '김' 나옴
+
+    var 손자토끼 = Object.create(아가토끼);
+    
+    // 자식을 부모로 설정할 수 있다.
+
+
+    
+
+
+</script>

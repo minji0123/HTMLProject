@@ -1,0 +1,57 @@
+<script>
+    //------------------------------------
+    // extends, super
+    //------------------------------------
+
+    // 엄마토끼 class 만들었어용
+    class 엄마토끼 {
+        constructor(이름){
+            this.first = '김'
+            this.last = 이름;
+        }
+    }
+
+    // var 엄마토끼1 = new 엄마토끼('버니');
+
+    class 아가토끼 extends 엄마토끼 {
+        constructor(이름, a = 0){
+            super(이름); // super 를 꼭해줘야됨 이거는 엄마토끼의 constructor 임
+            this.키 = 150+a;
+
+        }
+    }
+
+    // var 아가토끼1 = new 아가토끼(); // 이케하면 바로 오류남
+
+
+
+
+
+    class 엄마토끼11 {
+        constructor(이름){
+            this.first = '김'
+            this.last = 이름;
+        }
+        안녕(){
+            console.log('ㅎㅇ');
+        }
+    }
+
+    class 아가토끼11 extends 엄마토끼11 {
+        constructor(이름, a = 0){
+            super(이름); //이거는 엄마토끼11의 constructor 임
+            this.키 = 150+a;
+
+        }
+        안녕(){
+            console.log('ㅎㅇ!!');
+            super.안녕();// 이렇게 써도 됨. 얘는 엄마토끼11 의 prototype 임
+        
+        }
+    }
+    var 아가토끼111 = new 아가토끼11('버버니', 1);
+    // 아가토끼11 은 안녕() 을 쓸 수 있나??
+    // 쓸수이따
+
+
+</script>
