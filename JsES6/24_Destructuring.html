@@ -1,0 +1,66 @@
+<script>
+    //------------------------------------
+    // Destructuring 구조분해할당
+    //------------------------------------
+    // 참조형 데이터를 전부 변수에 담을려면?
+    var 배열 = [2,3,4];
+    var a = 배열[0];
+
+    // 이렇게 하면 된다.
+    var [a,b,c] = [2,3,4];
+
+
+
+
+    // object version
+    var obj = {name: 'k', age: 30};
+    var name = obj.name;// 굳이 이렇게 하지 말구
+
+    var {name, age} = {name: 'k', age: 30};
+
+    // key 값(변수값) 바꾸고 싶을 때
+    var {name:이름, age} = {name: 'k', age: 30};
+    // 이제 name 은 이름이다.
+
+
+
+    // default parameter 사용 가능
+
+
+
+    // 반대로 변수들을 object 에 집어넣고 싶은 경우
+    var name = 'k';
+    var age = 3
+    var obj = {
+        name : name,
+        age : age,
+    };
+    // 변수이름과 object 키 이름이 같을 때 
+    var obj = {
+        name ,
+        age,
+    };// 걍 이렇게 적어도됨
+
+
+
+    // 함수 파라미터 만들 때도 destructuring 사용함
+
+    // object
+    function 함수( {name,age} ){
+        console.log(name);
+    }
+
+    함수({name: 'k', age: 30});
+
+
+    // array
+    function 함수( [name,age] ){
+        console.log(name);
+    }
+
+    함수(['k',1]);
+
+</script>
+
+
+

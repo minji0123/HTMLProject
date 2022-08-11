@@ -1,0 +1,20 @@
+<script src="test.js"></script>
+
+<script type="module">
+    // 'test.js' 의 a 변수를 import 하게씁니당
+    // test.js 에다가 export 해줬으면 이름은 맘대로 지어도 된다.
+    // import 맘대로 from '/test.js'
+    // console.log(맘대로);
+
+    // import 디폴트, {a,b} from '/test.js'
+    // console.log(a);
+
+
+    import * as 넘어온애들 from '/test.js'
+    console.log(넘어온애들.a);
+
+    /*
+    
+    {a as 이름짓기}
+    */ 
+</script>
