@@ -1,0 +1,38 @@
+<script>
+    var 심볼 = Symbol('설명');
+
+    var weight = Symbol('내몸무게');
+    var height = Symbol('내키');
+    var person = {name : 'k'};
+    // person.weight = 100;
+    person[weight] = 200; // Symbol 자료형으로 저장함
+    person[height] = 1200; // Symbol 자료형으로 저장함
+
+
+    for (var k in person){
+        console.log(person[k]);
+    }
+    // Symbol 이 왜 출력안되냐면 enumerable 안해서그럼
+
+
+    // Symbol 특징
+
+    // 1. Symbol 을 만들 때 마다 유니크한 Symbol 이 생긴다.
+    var a = Symbol('설명');
+    var b = Symbol('설명');
+    console.log(a===b); // false 임
+    // Symbol 을 만들 때 마다 유니크한 Symbol 이 생긴다.
+
+
+    // 2. 전역 Symbol 만들기
+    var a  = Symbol.for('전역심볼');
+    var b  = Symbol.for('전역심볼');
+    console.log(a===b); // true 임
+    // 같은 설명의 심볼이 있으면 기존 심볼을 복붙해줌
+
+
+    // 3. iterator 
+    var 배열 = [2,3,4];
+    배열[Symbol.iterator];
+
+</script>

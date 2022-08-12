@@ -1,0 +1,85 @@
+<script>
+
+// for 문 사용할 때
+// 1. 코드 단순 반복
+// 2. 자료형에 담긴 자료들을 하나씩 꺼내고 싶을 때
+
+// 일반 for 문
+// forEach()        Array 전용
+// for in           Object 전용
+// for of           iterable 전용
+
+
+// [1,2,3].forEach()
+
+// ---------------------------------------------------
+// for in           Object, array 전용
+// ---------------------------------------------------
+
+// Object 에 있는 값을 전부 하나씩 꺼내서 사용할 때 
+var 오브젝트 = { name : 'Kim', age : 30 };
+
+for (var key in 오브젝트) {
+  console.log(오브젝트[key]);
+}
+// ---------------------------------------------------
+// for in 특징
+// ---------------------------------------------------
+
+// 1. enumerable 한거만 반복함
+console.log( Object.getOwnPropertyDescriptor(오브젝트, 'name') ); 
+// 출력해보면 writable, eunmerable, configuarable 이런거 있음
+// eunmerable 는 셀수있는지 여부임
+
+
+// 2. 부모의 prototype 도 반복해줌
+class 부모 {
+
+}
+부모.prototype.name = '박'
+var 오브젝트 = new 부모();
+
+for (var key in 오브젝트){
+    if(오브젝트.hasOwnProperty(key)){
+        console.log(오브젝트[key]);
+    }
+
+}// 근데 굳이 쓸 일이 없음
+
+
+
+// 3. 배열에 쓰기 가능
+var 배열 = [1,2,3]
+for (let k in 배열){
+    console.log(k,배열[i]);
+}
+
+
+
+// ---------------------------------------------------
+// for of           Object, array 전용
+// ---------------------------------------------------
+// Array,String, arguments, NodeList, Map, Set
+var 배열 = [1,2,3];
+
+
+for (var x of 배열){
+    console.log(x);
+}
+
+for (var x of '배열'){
+    console.log(x);
+}
+
+// 1. iterable 한 자료형에만 가능함
+// Array,String, arguments, NodeList, Map, Set
+// Object 는 안됨
+
+배열[Symbol.iterator]();
+// [Symbol.iterator](); 를 붙여서 뭐가 잘 나오는 애들만 for of 사용할 수 있음
+
+// NodeList
+document.getElementsByClassName();
+document.querySelectorAll();
+// 얘네 출력 결과는 [] 에 담겨있음 어레이가 아니라 NodeList 임
+</script>
