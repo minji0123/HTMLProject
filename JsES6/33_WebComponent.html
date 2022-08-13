@@ -1,0 +1,47 @@
+<custom-input></custom-input>
+<custom-input name="비번"></custom-input>
+
+<script>
+    //js 기능이 아니라
+    //js 로 구현할 수 있는 브라우저 기본 기능
+
+    // 웹 개발을 잘 하고 싶으면 브라우저 기능을 알아야 한다.
+    // js 문법은 도구일 뿐임
+
+
+    // 커스텀태그로 길고 복잡한 html 축약하는 방법
+
+    class 클래스 extends HTMLElement{
+        connectedCallBack(){
+            let name = this.getAttribute('name');
+            // 내가 만든 태그가 쓰일 때 사용될 코드 적으면됨
+            // this.innerHTML = `<label>내가만든태그!</label><input>`
+            this.innerHTML = `<label>내가만든${name}태그!</label><input>`
+        }
+    }
+    customElements.define('custom-input', 클래스);
+
+    // 커스텀태그장점
+    // html 중복제거, 다른 페이지에서 재활용 가능
+
+
+    // attribute 변경 감지하는 법
+    class 클래스 extends HTMLElement{
+        connectedCallBack(){
+            let name = this.getAttribute('name');
+            this.innerHTML = `<label>내가만든${name}태그!</label><input>`
+
+        }
+        // name 이라는 attribute 바뀌는지 감시해주시구여
+        static get observedAttributes(){
+            return ['name'];
+        }
+        // 바뀌면 이거 실행해주세여
+        attributeChangedCallback(){
+            console.log(this.getAttribute('name'));
+        }
+    }
+    customElements.define('custom-input', 클래스);
+
+
+</script>

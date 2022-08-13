@@ -1,0 +1,62 @@
+<script>
+    
+    // ---------------------------------------------------
+    // Map()
+    // ---------------------------------------------------
+    var person = new Map();
+    person.set('name','kim')
+    person.set('age',20)
+
+    //Object 랑 비슷하게 생겼지만 다른 부분이 있음
+    // 1. Object 는 key 부분에 String 만 가능하지만 Map 은 그런거 상관없음
+    person.set(100,숫자)
+
+    // Map 출력할 때
+    person.get('age');
+    // 지울 때
+    person.delete('age');
+    // 데이터 개수
+    person.size;
+    // for of
+    for(var x of person.keys()){
+        console.log(x);
+    }
+    // Map 한번에 만들 때
+    var person = new Map ([
+        ['name','k'],
+        ['age',20],
+        []
+    ])
+
+
+    // Map 쓰는 이유
+    // 자료간의 연관성, 의존성을 표현하기 위해 사용
+    // 그 외에는 쓸데없음
+
+    
+
+    // ---------------------------------------------------
+    // Set()
+    // ---------------------------------------------------
+    // 중복자료를 허용하지 않는 array 비슷한 거
+    var 출석부 = ['john','tom','andy','tom'];
+    // tom 이 중복되어버렸음
+
+    var 출석부2 = new Set(['john','tom','andy','tom']);
+
+
+    출석부2.add('sally');
+    출석부2.delete('sally');
+    출석부2.has('sally');
+    출석부2.size;// 중복값 빼고 세준다.
+
+    // forEach, for of 같은거 다 쓸 수 있음
+
+    // Set 활용
+    // array 안 중복 제거할 때 쓰면 좋음
+    // array -> set -> array
+    var 출석부2 = new Set(['john','tom','andy','tom']);
+    출석부 = [...출석부2];
+    // 이렇게 하면 됨
+
+</script>
